@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Nav /> {/* Add the Nav component here */}
+        <Nav /> 
         <div className='main'>
           <div className='gradient' />
         </div>

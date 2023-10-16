@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import { app } from '../../firebaseConfig';
 import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, GithubAuthProvider, signInWithPopup } from 'firebase/auth';
-
+import {ToastContainer, toast } from "react-toastify";
 
 const SignIn: React.FC = () => {
     const auth = getAuth(app);
@@ -16,6 +16,7 @@ const SignIn: React.FC = () => {
 
     const signIn = () => {
         if(!email || !password){
+        
             alert("all feilds are required")
         }else{
             signInWithEmailAndPassword(auth, email, password)
@@ -62,7 +63,7 @@ const SignIn: React.FC = () => {
 
             <main className="bg-gray-200 p-8 rounded-lg shadow-md w-96">
                 <h1 className="text-3xl font-semibold text-center text-orange-500 mb-6">Sign In</h1>
-
+                
                 <input
                     className="w-full p-2 rounded border border-gray-300 mb-4"
                     placeholder='Email'
