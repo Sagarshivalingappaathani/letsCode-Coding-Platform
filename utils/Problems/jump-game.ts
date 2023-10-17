@@ -48,8 +48,7 @@ export const jumpGame: Problem = {
 			id: 1,
 			inputText: `nums = [3,2,1,0,4]`,
 			outputText: `false`,
-			explanation:
-				"You will always arrive at index 3 no matter what. Its maximum jump length is 0, which makes it impossible to reach the last index.",
+			explanation: "You will always arrive at index 3 no matter what. Its maximum jump length is 0, which makes it impossible to reach the last index.",
 		},
 	],
 	constraints: `<li class='mt-2'><code>1 <= nums.length <= 10^4</code></li>
@@ -58,4 +57,5 @@ export const jumpGame: Problem = {
 	handlerFunction: jumpGameHandler,
 	starterFunctionName: "function canJump(",
 	order: 3,
+	difficulty: ""
 };

@@ -1,12 +1,18 @@
 import Link from "next/link";
-import {problems} from './mockProblems/mockProblems'
+//import {problems} from './mockProblems/mockProblems'
 import Image from 'next/image';
+import { DBProblem } from "../utils/types/problem";
+import { useEffect, useState } from "react";
+import {app,firestore} from "../firebaseConfig"
+import { collection, doc, getDoc, getDocs, orderBy, query } from "firebase/firestore";
 
 type ProblemsTableProps = {
 	
 };
 
 const ProblemsTable: React.FC<ProblemsTableProps> = () => {
+
+	const problems = useGetProblems();
 	
 	return (
 		<>
@@ -56,3 +62,24 @@ const ProblemsTable: React.FC<ProblemsTableProps> = () => {
 	);
 };
 export default ProblemsTable;
+
+function useGetProblems() {
+	const [problems, setProblems] = useState<DBProblem[]>([]);
+	//const [userSolvedProblem,setSolved]=useState<DBProblem[]>([]);
+
+	useEffect(() => {
+		const getProblems = async () => {
+			// fetching data logic
+			const q = query(collection(firestore, "problems"), orderBy("order", "asc"));
+			const querySnapshot = await getDocs(q);
+			const tmp: DBProblem[] = [];
+			querySnapshot.forEach((doc) => {
+				tmp.push({ id: doc.id, ...doc.data() } as DBProblem);
+			});
+			setProblems(tmp);
+		};
+
+		getProblems();
+	}, []);
+	return problems;
+}

@@ -3,10 +3,12 @@ import {app} from "../firebaseConfig"
 import { User, getAuth, signOut, onAuthStateChanged} from 'firebase/auth';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import Loader from '../components/loader'
 
 const Nav: React.FC = () => {
   const auth = getAuth(app);
   const [user, setUser] = useState<User | null>(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     // Add a listener to check if the user is authenticated
@@ -14,6 +16,7 @@ const Nav: React.FC = () => {
       if (user) {
         console.log(user)
         setUser(user);
+        setLoading(false);
       } else {
         setUser(null);
       }
@@ -67,44 +70,38 @@ const Nav: React.FC = () => {
         </div>
 
         <div className="sm:flex hidden">
-          <div className="flex items-center gap-3 md:gap-5">
-            {/* Display user profile image when logged in */
-            user ? (
-              <div className="flex items-center gap-3 md:gap-5">
-               <Image
-                    src={user?.photoURL || "/assets/images/avatar.png"}
-                    alt="logo"
-                    width={45}
-                    height={45}
-                    className="object-contain rounded-full"
-                    />
+        <div className="flex items-center gap-3 md:gap-5">
+          {user ? (
+            // Display user profile image when logged in
+            <div className="flex items-center gap-3 md:gap-5">
+              {/* User profile image */}
+              <Image
+                src={user?.photoURL || '/assets/images/avatar.png'}
+                alt="logo"
+                width={45}
+                height={45}
+                className="object-contain rounded-full"
+              />
 
-                <button
-                  onClick={handleSignOut}
-                  className="orange_gradient py-2 px-4 rounded-lg"
-                >
-                  <Image
-                    src="/assets/images/logout.png"
-                    alt="logo"
-                    width={25}
-                    height={25}
-                    className="object-contain rounded"
-                    />
-                 
-                </button>
-              </div>
-            ) : (
-              // Display sign-in and sign-up links when not logged in
-              <div className="flex gap-3 md:gap-5">
-                <a href="/signIn" className="outline_btn">
-                  Sign In
-                </a>
-                <a href="/signUp" className="outline_btn">
-                  Sign Up
-                </a>
-              </div>
-            )}
-          </div>
+              {/* Sign-out button */}
+              <button onClick={handleSignOut} className="orange_gradient py-2 px-4 rounded-lg">
+                <Image src="/assets/images/logout.png" alt="logo" width={25} height={25} className="object-contain rounded" />
+              </button>
+            </div>
+          ) : (
+            // Display sign-in and sign-up links when not logged in
+            <div className="flex gap-3 md:gap-5">
+              <a href="/signIn" className="outline_btn">
+                Sign In
+              </a>
+              <a href="/signUp" className="outline_btn">
+                Sign Up
+              </a>
+            </div>
+          )}
+          {loading && user && <Loader />}
+</div>
+
         </div>
       </div>
     </nav>

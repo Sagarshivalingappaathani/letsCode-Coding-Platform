@@ -13,7 +13,7 @@ const ProblemDescription: React.FC<ProblemDescriptionProps> = (props:ProblemDesc
 	  
 	
 	return (
-		<div className='bg-white-layer-1'>
+		<div className='bg-white-layer-1 ml-4'>
 			{/* TAB */}
 			<div className='flex h-11 w-full items-center pt-2 bg-white-layer-2  overflow-x-hidden'>
 				<div className="bg-white-layer-2 text-gradient-orange rounded-t-[5px] px-5 py-[10px] text-xl font-bold cursor-pointer text-gradient">

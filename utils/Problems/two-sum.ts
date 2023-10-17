@@ -28,6 +28,7 @@ const handlerTwoSum = (fn: any) => {
 			const result = fn(nums[i], targets[i]);
 			assert.deepStrictEqual(result, answers[i]);
 		}
+		
 		return true;
 	} catch (error: any) {
 		console.log("twoSum handler function error");
@@ -80,4 +81,5 @@ export const twoSum: Problem = {
 	starterCode: starterCodeTwoSum,
 	order: 1,
 	starterFunctionName: "function twoSum(",
+	difficulty: ""
 };

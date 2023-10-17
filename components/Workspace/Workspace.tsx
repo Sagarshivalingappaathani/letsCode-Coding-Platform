@@ -13,7 +13,7 @@ type Props = {
 const workSpace = (props: Props) => {
   return (
     <>
-      <main className="no-inherit-width" style={{ width: '100%' }}>
+      <main className="w-full">
           <Split className='split' minSize={0}>
             <ProblemDescription problem={props.problem} /> 
             <ProblemGround problem={props.problem} />

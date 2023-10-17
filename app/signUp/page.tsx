@@ -1,10 +1,11 @@
 "use client";
 import React from 'react';
 import Head from 'next/head';
-import { app } from '../../firebaseConfig';
+import { app,firestore } from '../../firebaseConfig';
 import { getAuth, createUserWithEmailAndPassword, GoogleAuthProvider, GithubAuthProvider, signInWithPopup } from 'firebase/auth';
 import { useState } from 'react';
-import { error } from 'console';
+import { toast } from "react-toastify";
+import { doc, setDoc } from "firebase/firestore";
 
 
 const Register: React.FC = () => {
@@ -12,16 +13,27 @@ const Register: React.FC = () => {
     const googleProvider = new GoogleAuthProvider();
     const githubProvider = new GithubAuthProvider();
 
+    const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-
-    const signUp = () => {
+    
+    const  signUp =  () => {
         if(!email || !password){
             alert("all feilds are required")
         }else{
             createUserWithEmailAndPassword(auth, email, password)
-            .then((response) => {
-                console.log(response.user);
+            .then(async (response) => {
+                //console.log(response.user);
+                const userData = {
+                    uid: response.user.uid,
+                    email:email,
+                    displayName: username,
+                    createdAt: Date.now(),
+                    updatedAt: Date.now(),
+                    solvedProblems: [],
+                };
+                await setDoc(doc(firestore, "users", response.user.uid), userData);
+                //console.log(userData);
                 window.location.href = '/'; 
             })
             .catch((err)=>{
@@ -33,8 +45,16 @@ const Register: React.FC = () => {
 
     const signUpWithGoogle = () => {
         signInWithPopup(auth, googleProvider)
-            .then((response) => {
-                console.log(response.user);
+            .then(async (response) => {
+                const userData = {
+                    uid: response.user.uid,
+                    email:response.user.email,
+                    displayName: response.user.displayName,
+                    createdAt: Date.now(),
+                    updatedAt: Date.now(),
+                    solvedProblems: [],
+                };
+                await setDoc(doc(firestore, "users", response.user.uid), userData);
                 window.location.href = '/';
             })
             .catch((err)=>{
@@ -45,8 +65,16 @@ const Register: React.FC = () => {
 
     const signUpWithGithub = () => {
         signInWithPopup(auth, githubProvider)
-            .then((response) => {
-                console.log(response.user);
+            .then(async (response) => {
+                const userData = {
+                    uid: response.user.uid,
+                    email:response.user.email,
+                    displayName: response.user.displayName,
+                    createdAt: Date.now(),
+                    updatedAt: Date.now(),
+                    solvedProblems: [],
+                };
+                await setDoc(doc(firestore, "users", response.user.uid), userData);
                 window.location.href = '/';
             })
             .catch(err => {
@@ -64,6 +92,15 @@ const Register: React.FC = () => {
 
             <main className="bg-gray-200 p-8 rounded-lg shadow-md w-96">
                 <h1 className="text-3xl font-semibold text-center text-orange-500 mb-6">Register</h1>
+
+                <input
+                    className="w-full p-2 rounded border border-gray-300 mb-4"
+                    placeholder='Username'
+                    onChange={(event) => setUsername(event.target.value)}
+                    value={username}
+                    type='text'
+                />
+
 
                 <input
                     className="w-full p-2 rounded border border-gray-300 mb-4"

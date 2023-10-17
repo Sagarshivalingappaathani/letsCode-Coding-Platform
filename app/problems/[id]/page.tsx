@@ -6,7 +6,7 @@ import { Problem } from "../../../utils/types/problem";
 import React, { useEffect,useState } from "react";
 
 type ProblemPageProps = {
-	problem: Problem;
+	problem: Problem|null;
 };
 
 // getStaticProps => it fetch the data
@@ -32,7 +32,11 @@ const ProblemPage: React.FC<ProblemPageProps> = () => {
     }
   }, []);
 
-  //console.log(problem)
+  if (!problem) {
+		console.error("props.problem is null or undefined");
+		return <div>No problem data available.</div>;
+	  }
+  
 
 	return (
 			<Workspace problem={problem} />

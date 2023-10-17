@@ -22,7 +22,9 @@ export default function RootLayout({
         <div className='main'>
           <div className='gradient' />
         </div>
-        <div className='app'>{children}</div>
+        <div>
+          {children}
+        </div>
       </body>
     </html>
   )
