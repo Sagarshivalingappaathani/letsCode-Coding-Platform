@@ -176,6 +176,48 @@
 
 /* Add styles for the spinning icons, e.g., Font Awesome classes */
 
+.btn-grad-sm {
+  background-image: linear-gradient(to right, #38fb16 0%, #66d475 51%, #0a9111 100%);
+  margin: 10px;
+  padding: 5px 10px; /* Adjust the padding to make it smaller */
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 10px #eee; /* Adjust the box shadow */
+  border-radius: 5px; /* Adjust the border radius */
+  display: inline-block; /* Change to inline-block to make it inline with text */
+  text-decoration: none; /* Add this to remove underlines by default */
+}
+
+.btn-grad-sm:hover {
+  background-position: right center;
+  color: #fff;
+  color: rgb(23, 23, 21);
+}
+
+         
+.btn-grad {
+  background-image: linear-gradient(to right, #FF512F 0%, #F09819  51%, #FF512F  100%);
+  margin: 30px;
+  width: 150px;
+  padding: 10px 30px;
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;            
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
 
 
 

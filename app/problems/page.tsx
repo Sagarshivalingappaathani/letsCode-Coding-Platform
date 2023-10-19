@@ -1,14 +1,12 @@
 "use client";
-import { useState } from "react";
 import ProblemsTable from "../../components/problemsTable";
 
 export default function Home() {
-  const [loadingProblems, setLoadingProblems] = useState(true);
 
   return (
     <>
-  <main className="no-inherit-width" style={{width: '100%'}}>
-    <div className='elative overflow-x-auto px-6 pb-10'>
+  <main className="no-inherit-width mt-10" style={{width: '100%'}}>
+    <div className='elative overflow-x-auto px-6 pb-10 flex justify-center'>
       <div className="w-full max-w-[1200px]">
         <table className="w-full ml-20">
           <thead className='text-dark text-left border-b'>

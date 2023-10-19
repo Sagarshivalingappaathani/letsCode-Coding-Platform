@@ -1,8 +1,8 @@
 "use client";
 
-import Workspace from "../../../components/Workspace/Workspace";
-import { problems } from "../../../utils/Problems/index";
-import { Problem } from "../../../utils/types/problem";
+import Workspace from "../../../components/ProblemPage/Problempage";
+import { problems } from "../../../data/Problems/index";
+import { Problem } from "../../../data/types/problem";
 import React, { useEffect,useState } from "react";
 
 type ProblemPageProps = {
@@ -14,7 +14,7 @@ type ProblemPageProps = {
 function getStaticProps(id:string|undefined) {
   if(id!==undefined){
     const problem = problems[id];
-    problem.handlerFunction = problem.handlerFunction.toString();
+    //problem.handlerFunction = problem.handlerFunction.toString();
     return problem
     
   }

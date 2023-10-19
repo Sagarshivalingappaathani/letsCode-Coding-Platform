@@ -1,4 +1,5 @@
 import '../styles/global.css'
+import Head from 'next/head';
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Nav from "../components/Nav";
