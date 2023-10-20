@@ -1,9 +1,20 @@
+<<<<<<< HEAD
 export type details = {
+=======
+export type Company = {
+>>>>>>> 65bee72f7b88fd6ed51a7569ac1cb19468ee09b9
 	id: number;
 	name:string
 };
 
+<<<<<<< HEAD
 
+=======
+export type Tag={
+	id: number;
+	name:string
+}
+>>>>>>> 65bee72f7b88fd6ed51a7569ac1cb19468ee09b9
 
 export type Example = {
 	id: number;
@@ -22,6 +33,7 @@ export type Problem = {
 	examples: Example[];
 	constraints: string;
 	order: number;
+<<<<<<< HEAD
 	starterCode: details[];
 	intialcode:details[],
 	endingcode:details[],
@@ -30,6 +42,14 @@ export type Problem = {
 	output:string
 	tag:details[]
 	companies:details[]
+=======
+	starterCode: string;
+	starterFunctionName: string;
+	inuputs:string
+	output:string
+	tag:Tag[]
+	companies:Company[]
+>>>>>>> 65bee72f7b88fd6ed51a7569ac1cb19468ee09b9
 	averagetime:string
 };
 

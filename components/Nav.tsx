@@ -3,7 +3,11 @@ import {app} from "../firebaseConfig"
 import { User, getAuth, signOut, onAuthStateChanged} from 'firebase/auth';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
+<<<<<<< HEAD
 import Loader from './loader/loader'
+=======
+import Loader from '../components/loader'
+>>>>>>> 65bee72f7b88fd6ed51a7569ac1cb19468ee09b9
 import '../styles/global.css'
 
 const Nav: React.FC = () => {

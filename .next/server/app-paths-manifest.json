@@ -3,7 +3,11 @@
   "/page": "app/page.js",
   "/propile/page": "app/propile/page.js",
   "/problems/page": "app/problems/page.js",
+<<<<<<< HEAD
   "/explore/page": "app/explore/page.js",
   "/problems/[id]/page": "app/problems/[id]/page.js",
   "/courses/cpp/page": "app/courses/cpp/page.js"
+=======
+  "/problems/[id]/page": "app/problems/[id]/page.js"
+>>>>>>> 65bee72f7b88fd6ed51a7569ac1cb19468ee09b9
 }

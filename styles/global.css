@@ -190,6 +190,37 @@
   display: inline-block; /* Change to inline-block to make it inline with text */
   text-decoration: none; /* Add this to remove underlines by default */
 }
+<<<<<<< HEAD
+=======
+
+.btn-grad-sm:hover {
+  background-position: right center;
+  color: #fff;
+  color: rgb(23, 23, 21);
+}
+
+         
+.btn-grad {
+  background-image: linear-gradient(to right, #FF512F 0%, #F09819  51%, #FF512F  100%);
+  margin: 30px;
+  width: 150px;
+  padding: 10px 30px;
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;            
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+>>>>>>> 65bee72f7b88fd6ed51a7569ac1cb19468ee09b9
 
 .btn-grad-sm:hover {
   background-position: right center;
