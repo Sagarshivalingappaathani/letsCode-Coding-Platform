@@ -1,7 +1,9 @@
 {
+  "/not-found": "app/not-found.js",
   "/page": "app/page.js",
+  "/propile/page": "app/propile/page.js",
   "/problems/page": "app/problems/page.js",
-  "/signIn/page": "app/signIn/page.js",
-  "/signUp/page": "app/signUp/page.js",
-  "/problems/[id]/page": "app/problems/[id]/page.js"
+  "/explore/page": "app/explore/page.js",
+  "/problems/[id]/page": "app/problems/[id]/page.js",
+  "/courses/cpp/page": "app/courses/cpp/page.js"
 }

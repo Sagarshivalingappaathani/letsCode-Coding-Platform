@@ -1,18 +1,18 @@
 import Link from "next/link";
-//import {problems} from './mockProblems/mockProblems'
 import Image from 'next/image';
-import { DBProblem } from "../utils/types/problem";
+import { DBProblem } from "../data/types/problem";
 import { useEffect, useState } from "react";
 import {app,firestore} from "../firebaseConfig"
 import { collection, doc, getDoc, getDocs, orderBy, query } from "firebase/firestore";
 
 type ProblemsTableProps = {
-	
+	loadingProblems:boolean
+	setLoadingProblems: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-const ProblemsTable: React.FC<ProblemsTableProps> = () => {
+const ProblemsTable: React.FC<ProblemsTableProps> = ({ loadingProblems,setLoadingProblems }) => {
 
-	const problems = useGetProblems();
+	const problems = useGetProblems(loadingProblems,setLoadingProblems);
 	
 	return (
 		<>
@@ -63,13 +63,14 @@ const ProblemsTable: React.FC<ProblemsTableProps> = () => {
 };
 export default ProblemsTable;
 
-function useGetProblems() {
+function useGetProblems(loadingProblems:boolean,setLoadingProblems: React.Dispatch<React.SetStateAction<boolean>>) {
 	const [problems, setProblems] = useState<DBProblem[]>([]);
-	//const [userSolvedProblem,setSolved]=useState<DBProblem[]>([]);
-
+	console.log(loadingProblems)
 	useEffect(() => {
 		const getProblems = async () => {
 			// fetching data logic
+			console.log(loadingProblems)
+			setLoadingProblems(true);
 			const q = query(collection(firestore, "problems"), orderBy("order", "asc"));
 			const querySnapshot = await getDocs(q);
 			const tmp: DBProblem[] = [];
@@ -77,9 +78,11 @@ function useGetProblems() {
 				tmp.push({ id: doc.id, ...doc.data() } as DBProblem);
 			});
 			setProblems(tmp);
+			setLoadingProblems(false);
+			console.log(loadingProblems)
 		};
 
 		getProblems();
-	}, []);
+	}, [setLoadingProblems]);
 	return problems;
 }
