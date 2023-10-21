@@ -117,7 +117,10 @@ const Playground: React.FC<PlaygroundProps> = (props: PlaygroundProps) => {
 		}else{
 			setSubmissionStatus("failed");
 			setFeedbackMessage("try again your solution is not correct for the all test case");
+<<<<<<< HEAD
 			setResults(output);
+=======
+>>>>>>> 1941fdf46ed3aca57869ea6dbebda59c8477071a
 			console.log(results)
 			console.log(feedbackMessage)
 		}
@@ -146,7 +149,11 @@ const Playground: React.FC<PlaygroundProps> = (props: PlaygroundProps) => {
   }
 
 return (
+<<<<<<< HEAD
 	<div className="flex flex-col bg-dark-layer-1 relative overflow-x-hidden w-full rounded-lg overflow-hidden shadow-lg  border border-gray-300 h-[calc(100vh-94px)]">
+=======
+	<div className="flex flex-col bg-dark-layer-1 relative overflow-x-hidden w-full">
+>>>>>>> 1941fdf46ed3aca57869ea6dbebda59c8477071a
 	  <PreferenceNav lang={lang} setLang={setLang} langid={langid} setlangid={setlangid} time={props.problem.averagetime}/>
 	  <Split className="h-[calc(100vh-94px)]" direction="vertical" sizes={[60, 40]} minSize={60}>
 		<div className="w-full overflow-auto ">
@@ -160,7 +167,11 @@ return (
 		<div className="">
 		  {submissionStatus === 'idle' ? (
 			<div className='m-5'>
+<<<<<<< HEAD
 			  <div className="flex items-center space-x-6 ">
+=======
+			  <div className="flex h-10 items-center space-x-6 ">
+>>>>>>> 1941fdf46ed3aca57869ea6dbebda59c8477071a
 				<div className="relative flex h-full flex-col justify-center cursor-pointer">
 				  <div className="text-sm font-medium leading-5 text-white">Testcases</div>
 				  <hr className="absolute bottom-0 h-0.5 w-full rounded-full border-none bg-white" />

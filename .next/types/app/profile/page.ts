@@ -1,8 +1,23 @@
+<<<<<<< HEAD
 // File: C:\Users\sagar\OneDrive\Desktop\copy\letscode\app\profile\page.jsx
+=======
+<<<<<<<< HEAD:.next/types/app/explore/page.ts
+// File: C:\Users\sagar\OneDrive\Desktop\copy\letscode\app\explore\page.tsx
+import * as entry from '../../../../app/explore/page.js'
+import type { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface.js'
+
+type TEntry = typeof import('../../../../app/explore/page.js')
+========
+// File: C:\Users\sagar\OneDrive\Desktop\copy\letscode\app\profile\page.tsx
+>>>>>>> 1941fdf46ed3aca57869ea6dbebda59c8477071a
 import * as entry from '../../../../app/profile/page.js'
 import type { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
 type TEntry = typeof import('../../../../app/profile/page.js')
+<<<<<<< HEAD
+=======
+>>>>>>>> 65bee72f7b88fd6ed51a7569ac1cb19468ee09b9:.next/types/app/profile/page.ts
+>>>>>>> 1941fdf46ed3aca57869ea6dbebda59c8477071a
 
 // Check that the entry is a valid entry
 checkFields<Diff<{

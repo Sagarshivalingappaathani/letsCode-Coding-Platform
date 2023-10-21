@@ -14,7 +14,10 @@ type ProblemsTableProps = {
 const ProblemsTable: React.FC<ProblemsTableProps> = ({ loadingProblems,setLoadingProblems }) => {
 
 	const problems = useGetProblems(loadingProblems,setLoadingProblems);
+<<<<<<< HEAD
 	const userDetails=getusedetailsonproblem();
+=======
+>>>>>>> 1941fdf46ed3aca57869ea6dbebda59c8477071a
 	
 	return (
 		<>
@@ -84,8 +87,16 @@ export default ProblemsTable;
 
 function useGetProblems(loadingProblems:boolean,setLoadingProblems: React.Dispatch<React.SetStateAction<boolean>>) {
 	const [problems, setProblems] = useState<DBProblem[]>([]);
+<<<<<<< HEAD
 	useEffect(() => {
 		const getProblems = async () => {
+=======
+	console.log(loadingProblems)
+	useEffect(() => {
+		const getProblems = async () => {
+			// fetching data logic
+			console.log(loadingProblems)
+>>>>>>> 1941fdf46ed3aca57869ea6dbebda59c8477071a
 			setLoadingProblems(true);
 			const q = query(collection(firestore, "problems"), orderBy("order", "asc"));
 			const querySnapshot = await getDocs(q);
@@ -95,6 +106,10 @@ function useGetProblems(loadingProblems:boolean,setLoadingProblems: React.Dispat
 			});
 			setProblems(tmp);
 			setLoadingProblems(false);
+<<<<<<< HEAD
+=======
+			console.log(loadingProblems)
+>>>>>>> 1941fdf46ed3aca57869ea6dbebda59c8477071a
 		};
 
 		getProblems();

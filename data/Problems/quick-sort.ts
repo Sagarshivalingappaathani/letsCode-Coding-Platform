@@ -1,6 +1,10 @@
 import assert from "assert";
 import { Problem } from "../types/problem";
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1941fdf46ed3aca57869ea6dbebda59c8477071a
 const intialcode = [
 	{
 		id:1,
@@ -108,6 +112,7 @@ const boilercode=[
 }`
 	}             
 ]
+<<<<<<< HEAD
 
 const solutioncode=[
 	{
@@ -206,6 +211,47 @@ const solutioncode=[
 }`
 	}
 ]
+=======
+=======
+const starterCodeTwoSum = `//{ Driver Code Starts
+#include <stdio.h>
+#include <bits/stdc++.h>
+using namespace std;
+
+// } Driver Code Ends
+class Solution
+{
+    public:
+	
+};
+
+/* Function to print an array */
+void printArray(int arr[], int size)
+{
+    int i;
+    for (i=0; i < size; i++)
+        printf("%d ", arr[i]);  
+}
+
+//{ Driver Code Starts.
+int main()
+{
+    int arr[1000],n,T,i;
+    scanf("%d",&T);
+    while(T--){
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+      scanf("%d",&arr[i]);
+      Solution ob;
+    ob.quickSort(arr, 0, n-1);
+    printArray(arr, n);
+    }
+    return 0;
+}
+// } Driver Code Ends`;
+
+>>>>>>> 65bee72f7b88fd6ed51a7569ac1cb19468ee09b9
+>>>>>>> 1941fdf46ed3aca57869ea6dbebda59c8477071a
 
 
 export const quickSort: Problem = {
@@ -242,6 +288,17 @@ export const quickSort: Problem = {
 	  inputText: "arr = [1, 2, 3, 4, 5]",
 	  outputText: "[1, 2, 3, 4, 5]",
 	},
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+	{
+	  id: 4,
+	  inputText: "arr = [9, 5, 7, 3, 2, 8]",
+	  outputText: "[2, 3, 5, 7, 8, 9]",
+	},
+>>>>>>> 65bee72f7b88fd6ed51a7569ac1cb19468ee09b9
+>>>>>>> 1941fdf46ed3aca57869ea6dbebda59c8477071a
   ],
 	constraints: `<div className="mt-4">
 				<ul>
@@ -259,6 +316,7 @@ export const quickSort: Problem = {
 				</li>
 				</ul>
 			</div>`,
+<<<<<<< HEAD
 	starterCode: boilercode,
 	intialcode:intialcode,
 	endingcode:endingcode,
@@ -266,6 +324,19 @@ export const quickSort: Problem = {
 	inuputs:"2 4 5 8 1 3 5 7 8 1 0 3",
 	output:"1 3 5 8 0 1 3 7 8 ",
 	order: 1,
+=======
+<<<<<<< HEAD
+	starterCode: boilercode,
+	intialcode:intialcode,
+	endingcode:endingcode,
+=======
+	starterCode: starterCodeTwoSum,
+>>>>>>> 65bee72f7b88fd6ed51a7569ac1cb19468ee09b9
+	inuputs:"2 4 5 8 1 3 5 7 8 1 0 3",
+	output:"1 3 5 8 0 1 3 7 8 ",
+	order: 1,
+	starterFunctionName: "",
+>>>>>>> 1941fdf46ed3aca57869ea6dbebda59c8477071a
 	difficulty: "Medium",
 	tag:[
 		{

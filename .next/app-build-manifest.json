@@ -1,5 +1,6 @@
 {
   "pages": {
+<<<<<<< HEAD
     "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -18,17 +19,24 @@
       "static/css/app/problems/page.css",
       "static/chunks/app/problems/page.js"
     ],
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 1941fdf46ed3aca57869ea6dbebda59c8477071a
     "/problems/[id]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/problems/[id]/page.css",
       "static/chunks/app/problems/[id]/page.js"
     ],
-    "/signIn/page": [
+>>>>>>> 65bee72f7b88fd6ed51a7569ac1cb19468ee09b9
+    "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/signIn/page.js"
+      "static/css/app/layout.css",
+      "static/chunks/app/layout.js"
     ],
+<<<<<<< HEAD
     "/solution/[id]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -49,16 +57,62 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/signUp/page.js"
+=======
+<<<<<<< HEAD
+    "/problems/[id]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/problems/[id]/page.css",
+      "static/chunks/app/problems/[id]/page.js"
+    ],
+    "/propile/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/propile/page.js"
+=======
+    "/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/page.js"
+>>>>>>> 65bee72f7b88fd6ed51a7569ac1cb19468ee09b9
+    ],
+    "/problems/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+<<<<<<< HEAD
+      "static/css/app/problems/page.css",
+      "static/chunks/app/problems/page.js"
+    ],
+    "/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/page.css",
+      "static/chunks/app/page.js"
+>>>>>>> 1941fdf46ed3aca57869ea6dbebda59c8477071a
     ],
     "/courses/cpp/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/courses/cpp/page.js"
     ],
+<<<<<<< HEAD
+=======
+    "/explore/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/explore/page.js"
+    ],
+>>>>>>> 1941fdf46ed3aca57869ea6dbebda59c8477071a
     "/not-found": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/not-found.js"
+<<<<<<< HEAD
+=======
+=======
+      "static/chunks/app/problems/page.js"
+>>>>>>> 65bee72f7b88fd6ed51a7569ac1cb19468ee09b9
+>>>>>>> 1941fdf46ed3aca57869ea6dbebda59c8477071a
     ]
   }
 }
