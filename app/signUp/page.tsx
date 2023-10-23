@@ -4,9 +4,7 @@ import Head from 'next/head';
 import { app,firestore } from '../../firebaseConfig';
 import { getAuth, createUserWithEmailAndPassword, GoogleAuthProvider, GithubAuthProvider, signInWithPopup } from 'firebase/auth';
 import { useState } from 'react';
-import { toast } from "react-toastify";
 import { doc, setDoc } from "firebase/firestore";
-
 
 const Register: React.FC = () => {
     const auth = getAuth(app);
@@ -31,6 +29,17 @@ const Register: React.FC = () => {
                     createdAt: Date.now(),
                     updatedAt: Date.now(),
                     solvedProblems: [],
+                    solvedprob: {
+                        easy: 1,
+                        medium: 0,
+                        hard: 0,
+                      },
+                    ActivityInd:[
+                        {
+                            date:new Date(),
+                            count:0
+                        }
+                    ]
                 };
                 await setDoc(doc(firestore, "users", response.user.uid), userData);
                 //console.log(userData);
@@ -53,6 +62,11 @@ const Register: React.FC = () => {
                     createdAt: Date.now(),
                     updatedAt: Date.now(),
                     solvedProblems: [],
+                    solvedprob: {
+                        easy: 1,
+                        medium: 0,
+                        hard: 0,
+                      }
                 };
                 await setDoc(doc(firestore, "users", response.user.uid), userData);
                 window.location.href = '/';
@@ -73,6 +87,11 @@ const Register: React.FC = () => {
                     createdAt: Date.now(),
                     updatedAt: Date.now(),
                     solvedProblems: [],
+                    solvedprob: {
+                        easy: 1,
+                        medium: 0,
+                        hard: 0,
+                      }
                 };
                 await setDoc(doc(firestore, "users", response.user.uid), userData);
                 window.location.href = '/';

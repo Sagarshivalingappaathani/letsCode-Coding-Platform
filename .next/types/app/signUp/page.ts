@@ -1,4 +1,4 @@
-// File: C:\Users\sagar\OneDrive\Desktop\letsCode SLP\letscode\app\signUp\page.tsx
+// File: C:\Users\sagar\OneDrive\Desktop\copy\letscode\app\signUp\page.tsx
 import * as entry from '../../../../app/signUp/page.js'
 import type { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
