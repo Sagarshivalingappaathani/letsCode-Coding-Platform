@@ -15,6 +15,16 @@ type ProblemPageProps = {
 function getStaticProps(id:string|undefined) {
   if(id!==undefined){
     const problem = problems[id];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    //problem.handlerFunction = problem.handlerFunction.toString();
+>>>>>>> 65bee72f7b88fd6ed51a7569ac1cb19468ee09b9
+>>>>>>> 1941fdf46ed3aca57869ea6dbebda59c8477071a
+>>>>>>> 1c040fbeb3d56f0e719643ab3cddfbf7a540ef6e
     return problem
     
   }

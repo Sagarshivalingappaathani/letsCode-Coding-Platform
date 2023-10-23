@@ -88,6 +88,10 @@ const boilercode=[
 	}             
 ]
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1c040fbeb3d56f0e719643ab3cddfbf7a540ef6e
 const solutioncode=[
   {
     id:1,
@@ -139,6 +143,11 @@ const solutioncode=[
 }`
   }
 ]
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 1941fdf46ed3aca57869ea6dbebda59c8477071a
+>>>>>>> 1c040fbeb3d56f0e719643ab3cddfbf7a540ef6e
 
 export const nextGretestEle: Problem = {
 	
@@ -186,10 +195,23 @@ export const nextGretestEle: Problem = {
 	starterCode: boilercode,
 	intialcode:intialcode,
 	endingcode:endingcode,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1c040fbeb3d56f0e719643ab3cddfbf7a540ef6e
   solutioncode:solutioncode,
 	inuputs:"2 4 1 3 2 4 5 6 8 0 1 3",
 	output:"3 4 4 -1 8 -1 1 3 -1 ",
 	order: 1,
+<<<<<<< HEAD
+=======
+=======
+	inuputs:"2 4 1 3 2 4 5 6 8 0 1 3",
+	output:"3 4 4 -1 8 -1 1 3 -1 ",
+	order: 1,
+	starterFunctionName: "",
+>>>>>>> 1941fdf46ed3aca57869ea6dbebda59c8477071a
+>>>>>>> 1c040fbeb3d56f0e719643ab3cddfbf7a540ef6e
 	difficulty: "Medium",
 	tag:[
 		{

@@ -135,7 +135,15 @@ std::out << *ptr << std::endl; // Prints the value of x (10)
           The Standard Template Library (STL) is a powerful set of C++ template classes that provide general-purpose classes with templates, implementing many popular and commonly used algorithms and data structures. Here are some of the essential components of the STL:
         </p>
 
+<<<<<<< HEAD
         <h4 className="text-lg font-bold mb-2 text-green-600">1. Vector</h4>
+=======
+<<<<<<< HEAD
+        <h4 className="text-lg font-bold mb-2 text-green-600">1. Vector</h4>
+=======
+        <h4 className="text-lg font-bold mb-2 text-white">1. Vector</h4>
+>>>>>>> 1941fdf46ed3aca57869ea6dbebda59c8477071a
+>>>>>>> 1c040fbeb3d56f0e719643ab3cddfbf7a540ef6e
         <p className="text-lg text-gray-600">
           A vector is a dynamic array that can grow or shrink in size. It's similar to an array but offers additional functionalities like resizing and automatic memory management. Here's an example of using vectors:
         </p>
@@ -161,7 +169,15 @@ int main() {
 }`}
         </pre>
 
+<<<<<<< HEAD
         <h4 className="text-lg font-bold mb-2 text-green-600">2. Map</h4>
+=======
+<<<<<<< HEAD
+        <h4 className="text-lg font-bold mb-2 text-green-600">2. Map</h4>
+=======
+        <h4 className="text-lg font-bold mb-2 text-white">2. Map</h4>
+>>>>>>> 1941fdf46ed3aca57869ea6dbebda59c8477071a
+>>>>>>> 1c040fbeb3d56f0e719643ab3cddfbf7a540ef6e
         <p className="text-lg text-gray-600">
           A map is a collection of key-value pairs. It allows you to store and retrieve values based on unique keys. Maps are typically implemented as binary search trees, providing efficient key-based retrieval. Here's an example of using maps:
         </p>
