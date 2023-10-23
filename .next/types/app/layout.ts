@@ -1,4 +1,4 @@
-// File: C:\Users\sagar\OneDrive\Desktop\letsCode SLP\letscode\app\layout.tsx
+// File: C:\Users\sagar\OneDrive\Desktop\copy\letscode\app\layout.tsx
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

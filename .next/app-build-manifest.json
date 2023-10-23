@@ -3,6 +3,7 @@
     "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
+      "static/css/app/page.css",
       "static/chunks/app/page.js"
     ],
     "/layout": [
@@ -14,6 +15,7 @@
     "/problems/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
+      "static/css/app/problems/page.css",
       "static/chunks/app/problems/page.js"
     ],
     "/problems/[id]/page": [
@@ -22,15 +24,27 @@
       "static/css/app/problems/[id]/page.css",
       "static/chunks/app/problems/[id]/page.js"
     ],
-    "/signIn/page": [
+    "/solution/[id]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/signIn/page.js"
+      "static/css/app/solution/[id]/page.css",
+      "static/chunks/app/solution/[id]/page.js"
     ],
-    "/signUp/page": [
+    "/contest/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/signUp/page.js"
+      "static/chunks/app/contest/page.js"
+    ],
+    "/contest/[id]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/contest/[id]/page.css",
+      "static/chunks/app/contest/[id]/page.js"
+    ],
+    "/profile/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/profile/page.js"
     ]
   }
 }
