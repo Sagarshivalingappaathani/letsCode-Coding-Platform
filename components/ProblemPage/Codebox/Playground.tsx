@@ -7,9 +7,12 @@ import '../../../styles/global.css';
 import { Problem } from '../../../data/types/problem';
 import EditorFooter from './EditorFooter';
 import PreferenceNav from './PreferenceNav';
+<<<<<<< HEAD
 import {app,firestore} from "../../../firebaseConfig"
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { collection, doc, getDoc, getDocs,updateDoc, where, getFirestore, orderBy, query,arrayUnion} from "firebase/firestore";
+=======
+>>>>>>> 1d6d92bb2174d8de788d2006f9d4513de1f6f863
 
 type PlaygroundProps = {
   problem: Problem;
@@ -25,10 +28,13 @@ const Playground: React.FC<PlaygroundProps> = (props: PlaygroundProps) => {
   const [submissionStatus, setSubmissionStatus] = useState<"idle" | "loading" | "success"| "failed"| "error">("idle");
   const [feedbackMessage, setFeedbackMessage] = useState<string>("");
   const [results, setResults] = useState<string>("");
+<<<<<<< HEAD
   const [user,setUser]=useState<any>(null)
 
   const temp=getusedetails(user,setUser);
   //console.log(temp);
+=======
+>>>>>>> 1d6d92bb2174d8de788d2006f9d4513de1f6f863
 
   useEffect(() => {
     const boilerCode = props.problem.starterCode[langid].name;
@@ -58,15 +64,24 @@ const Playground: React.FC<PlaygroundProps> = (props: PlaygroundProps) => {
 		let jsonResponse;
 		
 		try{
+<<<<<<< HEAD
 			//console.log(langid)
 			//console.log(props.problem.intialcode[langid].name+usercode+props.problem.endingcode[langid].name)
+=======
+			console.log(langid)
+			console.log(props.problem.intialcode[langid].name+usercode+props.problem.endingcode[langid].name)
+>>>>>>> 1d6d92bb2174d8de788d2006f9d4513de1f6f863
 			const response = await fetch(
 			  "https://judge0-ce.p.rapidapi.com/submissions",
 			  {
 				method: "POST",
 				headers: {
 				  "x-rapidapi-host": "judge0-ce.p.rapidapi.com",
+<<<<<<< HEAD
 				  "x-rapidapi-key": "eb318dba23mshf8f373d7d20e43dp1e7a93jsn925d441a53d6", 
+=======
+				  "x-rapidapi-key": "eb318dba23mshf8f373d7d20e43dp1e7a93jsn925d441a53d6", // Get yours for free at https://rapidapi.com/judge0-official/api/judge0-ce/
+>>>>>>> 1d6d92bb2174d8de788d2006f9d4513de1f6f863
 				  "content-type": "application/json",
 				  accept: "application/json",
 				},
@@ -121,23 +136,49 @@ const Playground: React.FC<PlaygroundProps> = (props: PlaygroundProps) => {
 			setSubmissionStatus("success");
 			setFeedbackMessage("Congratulations! Problem submitted successfully.");
 			setResults(output);
+<<<<<<< HEAD
 			updatedoc(user,props.problem.id,props.problem.difficulty);
 		}else{
 			setSubmissionStatus("failed");
 			setFeedbackMessage("try again your solution is not correct for the all test case");
 			setResults(output);
+=======
+		}else{
+			setSubmissionStatus("failed");
+			setFeedbackMessage("try again your solution is not correct for the all test case");
+<<<<<<< HEAD
+			setResults(output);
+=======
+<<<<<<< HEAD
+			setResults(output);
+=======
+>>>>>>> 1941fdf46ed3aca57869ea6dbebda59c8477071a
+>>>>>>> 1c040fbeb3d56f0e719643ab3cddfbf7a540ef6e
+>>>>>>> 1d6d92bb2174d8de788d2006f9d4513de1f6f863
 			console.log(results)
 			console.log(feedbackMessage)
 		}
         
       } else if (jsonGetSolution.stderr) {
         const error = atob(jsonGetSolution.stderr);
+<<<<<<< HEAD
         setSubmissionStatus("error");
         setFeedbackMessage("Error in the submission. Please check your code and try again.");
         setResults(error);
       } else {
         if (jsonGetSolution.compile_output !== null) {
           const compilation_error = atob(jsonGetSolution.compile_output);
+=======
+        console.log("error is at 91", error);
+        setSubmissionStatus("error");
+        setFeedbackMessage("Error in the submission. Please check your code and try again.");
+        setResults(error);
+		console.log(results)
+      } else {
+        if (jsonGetSolution.compile_output !== null) {
+          const compilation_error = atob(jsonGetSolution.compile_output);
+          console.log("error is at 98", compilation_error);
+>>>>>>> 1d6d92bb2174d8de788d2006f9d4513de1f6f863
           setSubmissionStatus("error");
           setFeedbackMessage("Compilation error. Please check your code and try again.");
           setResults(compilation_error);
@@ -145,14 +186,29 @@ const Playground: React.FC<PlaygroundProps> = (props: PlaygroundProps) => {
         }
       }
     } catch {
+<<<<<<< HEAD
 	  alert("error at")
+=======
+>>>>>>> 1d6d92bb2174d8de788d2006f9d4513de1f6f863
       setSubmissionStatus("error");
       setFeedbackMessage("Error Creating Submission");
     }
   }
 
 return (
+<<<<<<< HEAD
 	<div className="flex flex-col bg-dark-layer-1 relative overflow-x-hidden w-full rounded-lg overflow-hidden shadow-lg  border border-gray-300 h-[calc(100vh-94px)]">
+=======
+<<<<<<< HEAD
+	<div className="flex flex-col bg-dark-layer-1 relative overflow-x-hidden w-full rounded-lg overflow-hidden shadow-lg  border border-gray-300 h-[calc(100vh-94px)]">
+=======
+<<<<<<< HEAD
+	<div className="flex flex-col bg-dark-layer-1 relative overflow-x-hidden w-full rounded-lg overflow-hidden shadow-lg  border border-gray-300 h-[calc(100vh-94px)]">
+=======
+	<div className="flex flex-col bg-dark-layer-1 relative overflow-x-hidden w-full">
+>>>>>>> 1941fdf46ed3aca57869ea6dbebda59c8477071a
+>>>>>>> 1c040fbeb3d56f0e719643ab3cddfbf7a540ef6e
+>>>>>>> 1d6d92bb2174d8de788d2006f9d4513de1f6f863
 	  <PreferenceNav lang={lang} setLang={setLang} langid={langid} setlangid={setlangid} time={props.problem.averagetime}/>
 	  <Split className="h-[calc(100vh-94px)]" direction="vertical" sizes={[60, 40]} minSize={60}>
 		<div className="w-full overflow-auto ">
@@ -166,7 +222,19 @@ return (
 		<div className="">
 		  {submissionStatus === 'idle' ? (
 			<div className='m-5'>
+<<<<<<< HEAD
 			  <div className="flex items-center space-x-6 ">
+=======
+<<<<<<< HEAD
+			  <div className="flex items-center space-x-6 ">
+=======
+<<<<<<< HEAD
+			  <div className="flex items-center space-x-6 ">
+=======
+			  <div className="flex h-10 items-center space-x-6 ">
+>>>>>>> 1941fdf46ed3aca57869ea6dbebda59c8477071a
+>>>>>>> 1c040fbeb3d56f0e719643ab3cddfbf7a540ef6e
+>>>>>>> 1d6d92bb2174d8de788d2006f9d4513de1f6f863
 				<div className="relative flex h-full flex-col justify-center cursor-pointer">
 				  <div className="text-sm font-medium leading-5 text-white">Testcases</div>
 				  <hr className="absolute bottom-0 h-0.5 w-full rounded-full border-none bg-white" />
@@ -273,6 +341,7 @@ return (
 };
 
 export default Playground;
+<<<<<<< HEAD
 
 function getusedetails(user:any,setUser: React.Dispatch<React.SetStateAction<any>>){
 	
@@ -364,3 +433,5 @@ async function updatedoc(user:any, id:string, difficulty:string) {
 	}
   }
   
+=======
+>>>>>>> 1d6d92bb2174d8de788d2006f9d4513de1f6f863

@@ -1,8 +1,45 @@
+<<<<<<< HEAD
 // File: C:\Users\sagar\OneDrive\Desktop\copy\letscode\app\profile\page.jsx
+=======
+<<<<<<< HEAD
+<<<<<<<< HEAD:.next/types/app/profile/page.ts
+// File: C:\Users\sagar\OneDrive\Desktop\copy\letscode\app\profile\page.jsx
+=======
+<<<<<<< HEAD
+// File: C:\Users\sagar\OneDrive\Desktop\copy\letscode\app\profile\page.jsx
+=======
+<<<<<<<< HEAD:.next/types/app/explore/page.ts
+// File: C:\Users\sagar\OneDrive\Desktop\copy\letscode\app\explore\page.tsx
+import * as entry from '../../../../app/explore/page.js'
+import type { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface.js'
+
+type TEntry = typeof import('../../../../app/explore/page.js')
+========
+// File: C:\Users\sagar\OneDrive\Desktop\copy\letscode\app\profile\page.tsx
+>>>>>>> 1941fdf46ed3aca57869ea6dbebda59c8477071a
+>>>>>>> 1c040fbeb3d56f0e719643ab3cddfbf7a540ef6e
+>>>>>>> 1d6d92bb2174d8de788d2006f9d4513de1f6f863
 import * as entry from '../../../../app/profile/page.js'
 import type { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
 type TEntry = typeof import('../../../../app/profile/page.js')
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+========
+// File: C:\Users\sagar\OneDrive\Desktop\copy\letscode\app\courses\cpp\page.tsx
+import * as entry from '../../../../../app/courses/cpp/page.js'
+import type { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface.js'
+
+type TEntry = typeof import('../../../../../app/courses/cpp/page.js')
+>>>>>>>> 1c040fbeb3d56f0e719643ab3cddfbf7a540ef6e:.next/types/app/courses/cpp/page.ts
+=======
+<<<<<<< HEAD
+=======
+>>>>>>>> 65bee72f7b88fd6ed51a7569ac1cb19468ee09b9:.next/types/app/profile/page.ts
+>>>>>>> 1941fdf46ed3aca57869ea6dbebda59c8477071a
+>>>>>>> 1c040fbeb3d56f0e719643ab3cddfbf7a540ef6e
+>>>>>>> 1d6d92bb2174d8de788d2006f9d4513de1f6f863
 
 // Check that the entry is a valid entry
 checkFields<Diff<{

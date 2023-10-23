@@ -581,10 +581,13 @@ video {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
 }
+<<<<<<< HEAD
 .my-2{
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
+=======
+>>>>>>> 1d6d92bb2174d8de788d2006f9d4513de1f6f863
 .my-3{
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
@@ -611,9 +614,12 @@ video {
 .mb-2{
   margin-bottom: 0.5rem;
 }
+<<<<<<< HEAD
 .mb-3{
   margin-bottom: 0.75rem;
 }
+=======
+>>>>>>> 1d6d92bb2174d8de788d2006f9d4513de1f6f863
 .mb-4{
   margin-bottom: 1rem;
 }

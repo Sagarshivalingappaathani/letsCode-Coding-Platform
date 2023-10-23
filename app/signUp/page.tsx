@@ -33,6 +33,7 @@ const Register: React.FC = () => {
                         easy: 1,
                         medium: 0,
                         hard: 0,
+<<<<<<< HEAD
                       },
                     ActivityInd:[
                         {
@@ -40,6 +41,9 @@ const Register: React.FC = () => {
                             count:0
                         }
                     ]
+=======
+                      }
+>>>>>>> 1d6d92bb2174d8de788d2006f9d4513de1f6f863
                 };
                 await setDoc(doc(firestore, "users", response.user.uid), userData);
                 //console.log(userData);

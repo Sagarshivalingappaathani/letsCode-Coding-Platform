@@ -25,7 +25,10 @@
     "react-split": "^2.0.14",
     "react-syntax-highlighter": "^15.5.0",
     "react-toastify": "^9.1.3",
+<<<<<<< HEAD
     "react-tooltip": "^5.21.5",
+=======
+>>>>>>> 1d6d92bb2174d8de788d2006f9d4513de1f6f863
     "recharts": "^2.9.0",
     "tw-elements-react": "^1.0.0-alpha1"
   },
