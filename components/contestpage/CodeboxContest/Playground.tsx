@@ -70,7 +70,7 @@ const Playground: React.FC<PlaygroundProps> = (props: PlaygroundProps) => {
 				method: "POST",
 				headers: {
 				  "x-rapidapi-host": "judge0-ce.p.rapidapi.com",
-				  "x-rapidapi-key": "eb318dba23mshf8f373d7d20e43dp1e7a93jsn925d441a53d6", // Get yours for free at https://rapidapi.com/judge0-official/api/judge0-ce/
+				  "x-rapidapi-key": "fa178112d0msh9afb473ff9559fdp1fd950jsn45803dd3953d", 
 				  "content-type": "application/json",
 				  accept: "application/json",
 				},
@@ -108,7 +108,7 @@ const Playground: React.FC<PlaygroundProps> = (props: PlaygroundProps) => {
 				method: "GET",
 				headers: {
 				  "x-rapidapi-host": "judge0-ce.p.rapidapi.com",
-				  "x-rapidapi-key": "eb318dba23mshf8f373d7d20e43dp1e7a93jsn925d441a53d6", // Get yours for free at https://rapidapi.com/judge0-official/api/judge0-ce/
+				  "x-rapidapi-key": "fa178112d0msh9afb473ff9559fdp1fd950jsn45803dd3953d", 
 				  "content-type": "application/json",
 				},
 			  });
