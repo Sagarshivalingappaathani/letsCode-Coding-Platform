@@ -13,29 +13,27 @@ const intialcode = [
 		id:2,
 		name:`
     import java.io.*;
-    import java.util.*;
-    import java.util.stream.*;
+import java.util.*;
 
-    class Main {
+class Main {
+    public static void main(String[] args) throws IOException {
+        Scanner sc = new Scanner(System.in);
+        int T = sc.nextInt();
+        while (T > 0) {
+            int n = sc.nextInt();
+            int arr[] = new int[n]; // Change the array type to int[]
+            for (int i = 0; i < n; i++)
+                arr[i] = sc.nextInt();
 
-        public static void main(String[] args) throws IOException {
-            Scanner sc = new Scanner(System.in);
-            int T = sc.nextInt();
-            while (T > 0) {
-                int n = sc.nextInt();
-                long arr[] = new long[n];
-                for (int i = 0; i < n; i++)
-                    arr[i] = sc.nextInt();
+            Solution ob = new Solution();
 
-                Solution ob = new Solution();
+            // Calling findEquilibrium() function
+            System.out.print(ob.findEquilibrium(arr, n) + " ");
 
-                // Calling equilibriumPoint() function
-                System.out.print(ob.equilibriumPoint(arr, n) + " ");
-
-                T--;
-            }
+            T--;
         }
     }
+}
   `
 	}
 
@@ -65,8 +63,6 @@ const endingcode=[
             }
             
             Solution ob;
-    
-            //calling equilibriumPoint() function
             cout << ob.equilibriumPoint(a, n)<<" ";
         }
         return 0;
@@ -98,7 +94,7 @@ const boilercode=[
 		name:
 `class Solution { 
     // Function to find equilibrium point in the array.
-    public static int equilibriumPoint(long arr[], int n) {
+    public static int findEquilibrium(int arr[], int n) {
         // Your code here
     }
 }`
@@ -109,57 +105,78 @@ const solutioncode=[
   {
     id:1,
     name:
-`int findEquilibrium(int A[], int n)
-{
-  int sum=0,leftsum=0;   
-  //The technique used in the given code is called
-  //the "Equilibrium Index" or "Equilibrium Point" technique.
-  for(int i=0;i<n;i++)
-   sum+=A[i];
-   
-   for(int i=0;i<n;i++)
-   {
-       sum-=A[i];
-       if(sum==leftsum)
-       return i;
-       leftsum+=A[i];
-   }
-   return -1;
+`class Solution{
+  public:
+  // Function to find equilibrium point in the array.
+  // a: input array
+  // n: size of array
+  int equilibriumPoint(long long a[], int n) {
+  
+      if(n==1)
+         return 1;
       
-}`
+      int a1[n];
+      int a2[n];
+      int sum=0;
+      for(int i=0;i<n;i++)
+      {
+          sum=sum+a[i];
+          a1[i]=sum;
+          
+      }
+      
+      sum=0;
+      
+      for(int i=n-1;i>=0;i--)
+      {
+          sum=sum+a[i];
+          a2[i]=sum;
+          
+      }
+      
+      int k=-1;
+      for(int i=1;i<n-1;i++)
+      {
+          if(a1[i]==a2[i])
+             k=i;
+      }
+      
+      if(k>0)
+       return k+1;
+      else
+       return -1;
+      
+      
+  }
+
+};`
   },
   {
     id:2,
     name:
-`class Solution
-{
-   public static int findEquilibrium(int arr[], int n)
-      {
-        int l=0,r=arr.length-1;
-		int l_sum = arr[0],r_sum = arr[arr.length-1];
-		while(l<r) {
-			if(l_sum==r_sum) {
-				int a = l,b= r;
-				if(++a == --b) {					
-					return l+1;
-				}else {
-					l++;
-					l_sum += arr[l];
-					r--;
-					r_sum += arr[r];
-				}
-			}else if(l_sum<r_sum) {
-				l++;
-				l_sum += arr[l];
-			}else if(r_sum<l_sum) {
-				r--;
-				r_sum += arr[r];
-			}	
-		}
-		
-		return -1;
+`class Solution {
+  public static int findEquilibrium(int arr[], int n) {
+      long totalSum = 0;
+      long leftSum = 0;
+
+      for (int i = 0; i < n; i++) {
+          totalSum += arr[i];
       }
-}`
+
+      for (int i = 0; i < n; i++) {
+          totalSum -= arr[i];
+
+          if (leftSum == totalSum) {
+              return i + 1; // Equilibrium point found at index i
+          }
+
+          leftSum += arr[i];
+      }
+
+      return -1; // No equilibrium point found
+  }
+}
+`
   }
 ]
 

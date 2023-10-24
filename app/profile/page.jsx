@@ -69,16 +69,15 @@ const Profile = () => {
 
   const data = user?.ActivityInd;
   console.log(data)
-  // Assuming your timestamp data is in the 'data' array
 const simplifiedData = data?.map((timestamp) => {
   const dateFromTimestamp = new Date(timestamp.date.seconds * 1000);
-  dateFromTimestamp.setHours(0, 0, 0, 0); // Set time to midnight
-  const date = dateFromTimestamp.toISOString().split('T')[0]; // Extract date
-  const count = timestamp.count || 0; // Extract count, default to 0 if not present
+  dateFromTimestamp.setHours(0, 0, 0, 0); 
+  const date = dateFromTimestamp.toISOString().split('T')[0]; 
+  const count = timestamp.count || 0; 
   return { date, count };
 });
 
-console.log(simplifiedData);
+//console.log(simplifiedData);
 
 
   // Create an array of dates within the specified range
