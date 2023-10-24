@@ -1,0 +1,147 @@
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./node_modules/react-calendar-heatmap/dist/styles.css ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************/
+/*
+ * react-calendar-heatmap styles
+ *
+ * All of the styles in this file are optional and configurable!
+ * The github and gitlab color scales are provided for reference.
+ */
+
+.react-calendar-heatmap text {
+  font-size: 10px;
+  fill: #aaa;
+}
+
+.react-calendar-heatmap .react-calendar-heatmap-small-text {
+  font-size: 5px;
+}
+
+.react-calendar-heatmap rect:hover {
+  stroke: #555;
+  stroke-width: 1px;
+}
+
+/*
+ * Default color scale
+ */
+
+.react-calendar-heatmap .color-empty {
+  fill: #eeeeee;
+}
+
+.react-calendar-heatmap .color-filled {
+  fill: #8cc665;
+}
+
+/*
+ * Github color scale
+ */
+
+.react-calendar-heatmap .color-github-0 {
+  fill: #eeeeee;
+}
+.react-calendar-heatmap .color-github-1 {
+  fill: #d6e685;
+}
+.react-calendar-heatmap .color-github-2 {
+  fill: #8cc665;
+}
+.react-calendar-heatmap .color-github-3 {
+  fill: #44a340;
+}
+.react-calendar-heatmap .color-github-4 {
+  fill: #1e6823;
+}
+
+/*
+ * Gitlab color scale
+ */
+
+.react-calendar-heatmap .color-gitlab-0 {
+  fill: #ededed;
+}
+.react-calendar-heatmap .color-gitlab-1 {
+  fill: #acd5f2;
+}
+.react-calendar-heatmap .color-gitlab-2 {
+  fill: #7fa8d1;
+}
+.react-calendar-heatmap .color-gitlab-3 {
+  fill: #49729b;
+}
+.react-calendar-heatmap .color-gitlab-4 {
+  fill: #254e77;
+}
+
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./node_modules/react-tooltip/dist/react-tooltip.min.css ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************/
+:root{--rt-color-white:#fff;--rt-color-dark:#222;--rt-color-success:#8dc572;--rt-color-error:#be6464;--rt-color-warning:#f0ad4e;--rt-color-info:#337ab7;--rt-opacity:0.9}.core-styles-module_tooltip__3vRRp{left:0;opacity:0;pointer-events:none;position:absolute;top:0;transition:opacity .3s ease-out;visibility:hidden;will-change:opacity,visibility}.core-styles-module_fixed__pcSol{position:fixed}.core-styles-module_arrow__cvMwQ{background:inherit;position:absolute}.core-styles-module_noArrow__xock6{display:none}.core-styles-module_clickable__ZuTTB{pointer-events:auto}.core-styles-module_show__Nt9eE{opacity:var(--rt-opacity);visibility:visible}.styles-module_tooltip__mnnfp{border-radius:3px;font-size:90%;padding:8px 16px;width:max-content}.styles-module_arrow__K0L3T{height:8px;width:8px}[class*=react-tooltip__place-top]>.styles-module_arrow__K0L3T{transform:rotate(45deg)}[class*=react-tooltip__place-right]>.styles-module_arrow__K0L3T{transform:rotate(135deg)}[class*=react-tooltip__place-bottom]>.styles-module_arrow__K0L3T{transform:rotate(225deg)}[class*=react-tooltip__place-left]>.styles-module_arrow__K0L3T{transform:rotate(315deg)}.styles-module_dark__xNqje{background:var(--rt-color-dark);color:var(--rt-color-white)}.styles-module_light__Z6W-X{background-color:var(--rt-color-white);color:var(--rt-color-dark)}.styles-module_success__A2AKt{background-color:var(--rt-color-success);color:var(--rt-color-white)}.styles-module_warning__SCK0X{background-color:var(--rt-color-warning);color:var(--rt-color-white)}.styles-module_error__JvumD{background-color:var(--rt-color-error);color:var(--rt-color-white)}.styles-module_info__BWdHW{background-color:var(--rt-color-info);color:var(--rt-color-white)}
+/*!************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./app/profile/react-calender-heatmap.css ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************/
+.heatmap-container {
+  width: 100%;
+  height: 150px;
+}
+
+.react-calendar-heatmap rect {
+  fill: #8c8b8b; /* Light gray for days with a count of 0 */
+  stroke: #fff; /* Optional: Add a white border to the boxes */
+  stroke-width: 2px; /* Optional: Adjust the border width as needed */
+  border-radius: 10px; /* Make the border rounded */
+}
+
+
+.react-calendar-heatmap .color-empty {
+  fill: #e0e0e0;
+  border-radius: 50%;
+}
+
+.react-calendar-heatmap .color-low {
+  fill: hwb(181 69% 0%); 
+}
+
+.react-calendar-heatmap .color-medium {
+  fill: #5af2fc; 
+}
+
+.react-calendar-heatmap .color-high {
+  fill: hsl(198, 100%, 53%); 
+}
+
+
+.custom-tooltip {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px;
+  border-radius: 3px;
+  font-size: 12px;
+  pointer-events: none;
+}
+
+.react-calendar-heatmap text {
+  font-size: 8px; 
+  fill: #FFA70E;
+  font-weight: bold; 
+  font-family: 'Arial', sans-serif; 
+  text-transform: uppercase; 
+  letter-spacing: 1px; 
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+  
+  .react-calendar-heatmap .react-calendar-heatmap-small-text {
+    font-size: 5px;
+  }
+  
+  .react-calendar-heatmap rect:hover {
+    stroke: #555;
+    stroke-width: 1px;
+  }
+  
+
+  
+  

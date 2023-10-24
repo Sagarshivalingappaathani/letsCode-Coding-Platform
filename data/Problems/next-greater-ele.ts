@@ -88,6 +88,16 @@ const boilercode=[
 	}             
 ]
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1c040fbeb3d56f0e719643ab3cddfbf7a540ef6e
+>>>>>>> 1d6d92bb2174d8de788d2006f9d4513de1f6f863
+>>>>>>> 910e90f2b1fba40d886e2f6a4ef5a7403ee55ee2
 const solutioncode=[
   {
     id:1,
@@ -139,6 +149,17 @@ const solutioncode=[
 }`
   }
 ]
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 1941fdf46ed3aca57869ea6dbebda59c8477071a
+>>>>>>> 1c040fbeb3d56f0e719643ab3cddfbf7a540ef6e
+>>>>>>> 1d6d92bb2174d8de788d2006f9d4513de1f6f863
+>>>>>>> 910e90f2b1fba40d886e2f6a4ef5a7403ee55ee2
 
 export const nextGretestEle: Problem = {
 	
@@ -186,10 +207,35 @@ export const nextGretestEle: Problem = {
 	starterCode: boilercode,
 	intialcode:intialcode,
 	endingcode:endingcode,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1c040fbeb3d56f0e719643ab3cddfbf7a540ef6e
+>>>>>>> 1d6d92bb2174d8de788d2006f9d4513de1f6f863
+>>>>>>> 910e90f2b1fba40d886e2f6a4ef5a7403ee55ee2
   solutioncode:solutioncode,
 	inuputs:"2 4 1 3 2 4 5 6 8 0 1 3",
 	output:"3 4 4 -1 8 -1 1 3 -1 ",
 	order: 1,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+	inuputs:"2 4 1 3 2 4 5 6 8 0 1 3",
+	output:"3 4 4 -1 8 -1 1 3 -1 ",
+	order: 1,
+	starterFunctionName: "",
+>>>>>>> 1941fdf46ed3aca57869ea6dbebda59c8477071a
+>>>>>>> 1c040fbeb3d56f0e719643ab3cddfbf7a540ef6e
+>>>>>>> 1d6d92bb2174d8de788d2006f9d4513de1f6f863
+>>>>>>> 910e90f2b1fba40d886e2f6a4ef5a7403ee55ee2
 	difficulty: "Medium",
 	tag:[
 		{

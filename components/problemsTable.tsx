@@ -14,8 +14,24 @@ type ProblemsTableProps = {
 const ProblemsTable: React.FC<ProblemsTableProps> = ({ loadingProblems,setLoadingProblems }) => {
 
 	const problems = useGetProblems(loadingProblems,setLoadingProblems);
+<<<<<<< HEAD
 	//console.log(problems)
 	const userDetails=getusedetailsonproblem();
+=======
+<<<<<<< HEAD
+	//console.log(problems)
+	const userDetails=getusedetailsonproblem();
+=======
+<<<<<<< HEAD
+	const userDetails=getusedetailsonproblem();
+=======
+<<<<<<< HEAD
+	const userDetails=getusedetailsonproblem();
+=======
+>>>>>>> 1941fdf46ed3aca57869ea6dbebda59c8477071a
+>>>>>>> 1c040fbeb3d56f0e719643ab3cddfbf7a540ef6e
+>>>>>>> 1d6d92bb2174d8de788d2006f9d4513de1f6f863
+>>>>>>> 910e90f2b1fba40d886e2f6a4ef5a7403ee55ee2
 	
 	return (
 		<>
@@ -43,8 +59,17 @@ const ProblemsTable: React.FC<ProblemsTableProps> = ({ loadingProblems,setLoadin
 							<td className={`px-6 py-4 ${difficulyColor}`}>{problem.difficulty}</td>
 							<td className={"px-6 py-4"}>{problem.category}</td>
 							<td className='mx-5 text-left font-medium whitespace-nowrap text-dark-green-s'>
+<<<<<<< HEAD
 							{userDetails && userDetails.find((element: string) => element === problem.id) ? (
 								<div className="text-center" style={{ background: 'linear-gradient(45deg, #0CA750, #3AA34D)', color: 'white', borderRadius: '0.25rem', width:"100px"}}>
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1d6d92bb2174d8de788d2006f9d4513de1f6f863
+							{userDetails.find((element: string) => element === problem.id) ? (
+								<div className="text-center" style={{ background: 'linear-gradient(45deg, #0CA750, #3AA34D)', color: 'white', borderRadius: '0.25rem', padding: '0.5rem' ,width:"130px"}}>
+>>>>>>> 910e90f2b1fba40d886e2f6a4ef5a7403ee55ee2
 								completed
 								</div>
 							) : (
@@ -53,13 +78,42 @@ const ProblemsTable: React.FC<ProblemsTableProps> = ({ loadingProblems,setLoadin
 									className='hover:text-blue-600 cursor-pointer'
 									href={`/problems/${problem.id}`}
 								>
+<<<<<<< HEAD
 									<div className="text-center" style={{ background: 'linear-gradient(45deg, #FFA500, #FF6347)', color: 'white', borderRadius: '0.25rem',width:"100px" }}>
+=======
+									<div className="text-center" style={{ background: 'linear-gradient(45deg, #FFA500, #FF6347)', color: 'white', borderRadius: '0.25rem', padding: '0.5rem',width:"130px" }}>
+>>>>>>> 910e90f2b1fba40d886e2f6a4ef5a7403ee55ee2
 									do it Now
 									</div>
 								</Link>
 								</div>
 							)}
 							</td>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+  {userDetails.find((element: string) => element === problem.id) ? (
+    <div className="text-center" style={{ background: 'linear-gradient(45deg, #0CA750, #3AA34D)', color: 'white', borderRadius: '0.25rem', padding: '0.5rem' ,width:"130px"}}>
+      completed
+    </div>
+  ) : (
+    <div>
+      <Link
+        className='hover:text-blue-600 cursor-pointer'
+        href={`/problems/${problem.id}`}
+      >
+        <div className="text-center" style={{ background: 'linear-gradient(45deg, #FFA500, #FF6347)', color: 'white', borderRadius: '0.25rem', padding: '0.5rem',width:"130px" }}>
+          do it Now
+        </div>
+      </Link>
+    </div>
+  )}
+</td>
+>>>>>>> 1c040fbeb3d56f0e719643ab3cddfbf7a540ef6e
+>>>>>>> 1d6d92bb2174d8de788d2006f9d4513de1f6f863
+>>>>>>> 910e90f2b1fba40d886e2f6a4ef5a7403ee55ee2
 
 							<td className={"px-6 py-4"}>
 							<Link href={`/solution/${problem.id}`}>
@@ -85,8 +139,31 @@ export default ProblemsTable;
 
 function useGetProblems(loadingProblems:boolean,setLoadingProblems: React.Dispatch<React.SetStateAction<boolean>>) {
 	const [problems, setProblems] = useState<DBProblem[]>([]);
+<<<<<<< HEAD
 	useEffect(() => {
 		const getProblems = async () => {
+=======
+<<<<<<< HEAD
+	useEffect(() => {
+		const getProblems = async () => {
+=======
+<<<<<<< HEAD
+	useEffect(() => {
+		const getProblems = async () => {
+=======
+<<<<<<< HEAD
+	useEffect(() => {
+		const getProblems = async () => {
+=======
+	console.log(loadingProblems)
+	useEffect(() => {
+		const getProblems = async () => {
+			// fetching data logic
+			console.log(loadingProblems)
+>>>>>>> 1941fdf46ed3aca57869ea6dbebda59c8477071a
+>>>>>>> 1c040fbeb3d56f0e719643ab3cddfbf7a540ef6e
+>>>>>>> 1d6d92bb2174d8de788d2006f9d4513de1f6f863
+>>>>>>> 910e90f2b1fba40d886e2f6a4ef5a7403ee55ee2
 			setLoadingProblems(true);
 			const q = query(collection(firestore, "problems"), orderBy("order", "asc"));
 			const querySnapshot = await getDocs(q);
@@ -96,6 +173,19 @@ function useGetProblems(loadingProblems:boolean,setLoadingProblems: React.Dispat
 			});
 			setProblems(tmp);
 			setLoadingProblems(false);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+			console.log(loadingProblems)
+>>>>>>> 1941fdf46ed3aca57869ea6dbebda59c8477071a
+>>>>>>> 1c040fbeb3d56f0e719643ab3cddfbf7a540ef6e
+>>>>>>> 1d6d92bb2174d8de788d2006f9d4513de1f6f863
+>>>>>>> 910e90f2b1fba40d886e2f6a4ef5a7403ee55ee2
 		};
 
 		getProblems();
