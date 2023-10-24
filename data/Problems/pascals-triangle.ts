@@ -156,11 +156,7 @@ The 1000000007L is the key point here.`
 
 export const pascalsTriangle: Problem = {
 	
-<<<<<<< HEAD
     id: "pasacals-triangle",
-=======
-    id: "pascals-triangle",
->>>>>>> 910e90f2b1fba40d886e2f6a4ef5a7403ee55ee2
     title: "Pascal's Triangle",
     problemStatement: `<div class="mt-1">
     <p>
@@ -223,11 +219,7 @@ export const pascalsTriangle: Problem = {
     solutioncode:solutioncode,
 	inuputs:"5 1 2 3 4 5",
 	output:"1 1 1 1 2 1 1 3 3 1 1 4 6 4 1 ",
-<<<<<<< HEAD
 	order: 7,
-=======
-	order: 6,
->>>>>>> 910e90f2b1fba40d886e2f6a4ef5a7403ee55ee2
 	difficulty: "Medium",
 	tag:[
 		{

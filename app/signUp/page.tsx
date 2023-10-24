@@ -5,11 +5,8 @@ import { app,firestore } from '../../firebaseConfig';
 import { getAuth, createUserWithEmailAndPassword, GoogleAuthProvider, GithubAuthProvider, signInWithPopup } from 'firebase/auth';
 import { useState } from 'react';
 import { doc, setDoc } from "firebase/firestore";
-<<<<<<< HEAD
 import '../../styles/global.css'
 import Image from 'next/image';
-=======
->>>>>>> 910e90f2b1fba40d886e2f6a4ef5a7403ee55ee2
 
 const Register: React.FC = () => {
     const auth = getAuth(app);
@@ -35,31 +32,17 @@ const Register: React.FC = () => {
                     updatedAt: Date.now(),
                     solvedProblems: [],
                     solvedprob: {
-<<<<<<< HEAD
                         easy: 0,
                         medium: 0,
                         hard: 0,
-=======
-                        easy: 1,
-                        medium: 0,
-                        hard: 0,
-<<<<<<< HEAD
->>>>>>> 910e90f2b1fba40d886e2f6a4ef5a7403ee55ee2
                       },
                     ActivityInd:[
                         {
                             date:new Date(),
                             count:0
                         }
-<<<<<<< HEAD
                     ],
                     imgUrl:"/assets/images/avatar.png"
-=======
-                    ]
-=======
-                      }
->>>>>>> 1d6d92bb2174d8de788d2006f9d4513de1f6f863
->>>>>>> 910e90f2b1fba40d886e2f6a4ef5a7403ee55ee2
                 };
                 await setDoc(doc(firestore, "users", response.user.uid), userData);
                 //console.log(userData);
@@ -83,7 +66,6 @@ const Register: React.FC = () => {
                     updatedAt: Date.now(),
                     solvedProblems: [],
                     solvedprob: {
-<<<<<<< HEAD
                         easy: 0,
                         medium: 0,
                         hard: 0,
@@ -95,12 +77,6 @@ const Register: React.FC = () => {
                           }
                       ],
                       imgUrl:response.user.photoURL
-=======
-                        easy: 1,
-                        medium: 0,
-                        hard: 0,
-                      }
->>>>>>> 910e90f2b1fba40d886e2f6a4ef5a7403ee55ee2
                 };
                 await setDoc(doc(firestore, "users", response.user.uid), userData);
                 window.location.href = '/';
@@ -122,7 +98,6 @@ const Register: React.FC = () => {
                     updatedAt: Date.now(),
                     solvedProblems: [],
                     solvedprob: {
-<<<<<<< HEAD
                         easy: 0,
                         medium: 0,
                         hard: 0,
@@ -134,12 +109,6 @@ const Register: React.FC = () => {
                           }
                       ],
                       imgUrl:response.user.photoURL
-=======
-                        easy: 1,
-                        medium: 0,
-                        hard: 0,
-                      }
->>>>>>> 910e90f2b1fba40d886e2f6a4ef5a7403ee55ee2
                 };
                 await setDoc(doc(firestore, "users", response.user.uid), userData);
                 window.location.href = '/';

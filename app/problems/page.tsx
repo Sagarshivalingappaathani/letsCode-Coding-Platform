@@ -1,21 +1,9 @@
 "use client";
+import { useState } from "react";
 import ProblemsTable from "../../components/problemsTable";
 import "../../styles/global.css"
 
 export default function Home() {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 1941fdf46ed3aca57869ea6dbebda59c8477071a
->>>>>>> 1c040fbeb3d56f0e719643ab3cddfbf7a540ef6e
->>>>>>> 1d6d92bb2174d8de788d2006f9d4513de1f6f863
->>>>>>> 910e90f2b1fba40d886e2f6a4ef5a7403ee55ee2
 
   const [loadingProblems, setLoadingProblems] = useState(true);
 
@@ -31,24 +19,6 @@ export default function Home() {
       )
     }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-
-  return (
-    <>
-  <main className="no-inherit-width mt-10" style={{width: '100%'}}>
->>>>>>> 65bee72f7b88fd6ed51a7569ac1cb19468ee09b9
->>>>>>> 1941fdf46ed3aca57869ea6dbebda59c8477071a
->>>>>>> 1c040fbeb3d56f0e719643ab3cddfbf7a540ef6e
->>>>>>> 1d6d92bb2174d8de788d2006f9d4513de1f6f863
->>>>>>> 910e90f2b1fba40d886e2f6a4ef5a7403ee55ee2
     <div className='elative overflow-x-auto px-6 pb-10 flex justify-center'>
       <div className="w-full max-w-[1200px]">
         <table className="w-full ml-20">
