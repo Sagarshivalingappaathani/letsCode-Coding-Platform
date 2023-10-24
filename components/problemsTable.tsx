@@ -1,18 +1,21 @@
 import Link from "next/link";
-//import {problems} from './mockProblems/mockProblems'
 import Image from 'next/image';
-import { DBProblem } from "../utils/types/problem";
+import { DBProblem } from "../data/types/problem";
 import { useEffect, useState } from "react";
 import {app,firestore} from "../firebaseConfig"
-import { collection, doc, getDoc, getDocs, orderBy, query } from "firebase/firestore";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { collection, doc, getDoc, getDocs, where, getFirestore, orderBy, query } from "firebase/firestore";
 
 type ProblemsTableProps = {
-	
+	loadingProblems:boolean
+	setLoadingProblems: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-const ProblemsTable: React.FC<ProblemsTableProps> = () => {
+const ProblemsTable: React.FC<ProblemsTableProps> = ({ loadingProblems,setLoadingProblems }) => {
 
-	const problems = useGetProblems();
+	const problems = useGetProblems(loadingProblems,setLoadingProblems);
+	//console.log(problems)
+	const userDetails=getusedetailsonproblem();
 	
 	return (
 		<>
@@ -39,10 +42,27 @@ const ProblemsTable: React.FC<ProblemsTableProps> = () => {
 							</td>
 							<td className={`px-6 py-4 ${difficulyColor}`}>{problem.difficulty}</td>
 							<td className={"px-6 py-4"}>{problem.category}</td>
-                            <th className='px-2 py-4 font-medium whitespace-nowrap text-dark-green-s'>
-							</th>
+							<td className='mx-5 text-left font-medium whitespace-nowrap text-dark-green-s'>
+							{userDetails && userDetails.find((element: string) => element === problem.id) ? (
+								<div className="text-center" style={{ background: 'linear-gradient(45deg, #0CA750, #3AA34D)', color: 'white', borderRadius: '0.25rem', width:"100px"}}>
+								completed
+								</div>
+							) : (
+								<div>
+								<Link
+									className='hover:text-blue-600 cursor-pointer'
+									href={`/problems/${problem.id}`}
+								>
+									<div className="text-center" style={{ background: 'linear-gradient(45deg, #FFA500, #FF6347)', color: 'white', borderRadius: '0.25rem',width:"100px" }}>
+									do it Now
+									</div>
+								</Link>
+								</div>
+							)}
+							</td>
+
 							<td className={"px-6 py-4"}>
-							<a href="/">
+							<Link href={`/solution/${problem.id}`}>
                                 <Image
                                 src="/assets/images/solution.png" 
                                 alt="logo"
@@ -50,7 +70,7 @@ const ProblemsTable: React.FC<ProblemsTableProps> = () => {
                                 height={45}
                                 className="object-contain"
                                 />
-                            </a>
+                            </Link>
 								
 							</td>
 						</tr>
@@ -63,13 +83,11 @@ const ProblemsTable: React.FC<ProblemsTableProps> = () => {
 };
 export default ProblemsTable;
 
-function useGetProblems() {
+function useGetProblems(loadingProblems:boolean,setLoadingProblems: React.Dispatch<React.SetStateAction<boolean>>) {
 	const [problems, setProblems] = useState<DBProblem[]>([]);
-	//const [userSolvedProblem,setSolved]=useState<DBProblem[]>([]);
-
 	useEffect(() => {
 		const getProblems = async () => {
-			// fetching data logic
+			setLoadingProblems(true);
 			const q = query(collection(firestore, "problems"), orderBy("order", "asc"));
 			const querySnapshot = await getDocs(q);
 			const tmp: DBProblem[] = [];
@@ -77,9 +95,57 @@ function useGetProblems() {
 				tmp.push({ id: doc.id, ...doc.data() } as DBProblem);
 			});
 			setProblems(tmp);
+			setLoadingProblems(false);
 		};
 
 		getProblems();
-	}, []);
+	}, [setLoadingProblems]);
 	return problems;
 }
+
+function getusedetailsonproblem(){
+	const [user,setUser]=useState<any>(null)
+
+  const fetchUserDetails = async (email:string|null) => {
+    const db = getFirestore(app);
+    const usersCollection = collection(db, 'users'); 
+  
+    const q = query(usersCollection, where('email', '==', email));
+  
+    try {
+      const querySnapshot = await getDocs(q);
+      if (!querySnapshot.empty) {
+          querySnapshot.forEach((doc) => {
+         
+          const userData = doc.data();
+          //console.log('User Details:', userData.solvedProblems);
+          setUser(userData);
+		  return user.solvedProblems;
+        });
+      } else {
+        console.log('No user found with this email.');
+      }
+    } catch (error) {
+      console.error('Error fetching user details:', error);
+    }
+  };
+  
+  useEffect(() => {
+    const auth = getAuth(app);
+  
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      if (currentUser) {
+        const userEmail = currentUser.email;
+        fetchUserDetails(userEmail);
+      } else {
+        setUser(null);
+      }
+    });
+  
+    return () => unsubscribe(); 
+  }, [user]);
+
+  return user?.solvedProblems || null;
+
+}
+
