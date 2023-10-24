@@ -57,7 +57,7 @@ const Profile = () => {
   }, []);
 
   const pieData = [
-    { name: 'Easy', value: user?.solvedprob.easy || 1 },
+    { name: 'Easy', value: user?.solvedprob.easy || 0 },
     { name: 'Medium', value: user?.solvedprob.medium || 0 },
     { name: 'Hard', value: user?.solvedprob.hard || 0 },
   ];
