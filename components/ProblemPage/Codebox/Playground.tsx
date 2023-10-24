@@ -27,7 +27,7 @@ const Playground: React.FC<PlaygroundProps> = (props: PlaygroundProps) => {
   const [results, setResults] = useState<string>("");
   const [user,setUser]=useState<any>(null)
 
-  const temp=getusedetails(user,setUser);
+  const temp=useGetdetails(user,setUser);
   //console.log(temp);
 
   useEffect(() => {
@@ -127,7 +127,7 @@ const Playground: React.FC<PlaygroundProps> = (props: PlaygroundProps) => {
 			setSubmissionStatus("success");
 			setFeedbackMessage("Congratulations! Problem submitted successfully.");
 			setResults(output);
-			updatedoc(user,props.problem.id,props.problem.difficulty);
+			useUpdatedoc(user,props.problem.id,props.problem.difficulty);
 		}else{
 			setSubmissionStatus("failed");
 			setFeedbackMessage("try again your solution is not correct for the all test case");
@@ -280,7 +280,7 @@ return (
 
 export default Playground;
 
-function getusedetails(user:any,setUser: React.Dispatch<React.SetStateAction<any>>){
+function useGetdetails(user:any,setUser: React.Dispatch<React.SetStateAction<any>>){
 	
   const fetchUserDetails = async (email:string|null) => {
     const db = getFirestore(app);
@@ -322,7 +322,7 @@ function getusedetails(user:any,setUser: React.Dispatch<React.SetStateAction<any
 
 }
 
-async function updatedoc(user:any, id:string, difficulty:string) {
+async function useUpdatedoc(user:any, id:string, difficulty:string) {
 	difficulty = difficulty.toLowerCase();
   
 	const collectionRef = collection(firestore, "users");
