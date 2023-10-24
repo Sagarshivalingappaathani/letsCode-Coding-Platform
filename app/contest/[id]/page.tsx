@@ -6,7 +6,6 @@ import React, { useEffect,useState } from "react";
 import '../../../styles/global.css';
 
 type ProblemProps = {
-	problem: Problem|null;
 };
 
 
