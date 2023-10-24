@@ -1,3 +1,4 @@
+"use client"
 import Contest from "../../../components/contestpage/Contestpage";
 import { problems } from "../../../data/Problems/index";
 import { Problem } from "../../../data/types/problem";
