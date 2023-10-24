@@ -6,9 +6,7 @@ import { Problem } from "../../../data/types/problem";
 import React, { useEffect,useState } from "react";
 import '../../../styles/global.css';
 
-type ProblemPageProps = {
-	problem: Problem|null;
-};
+
 
 // getStaticProps => it fetch the data
 
@@ -20,7 +18,7 @@ function getStaticProps(id:string|undefined) {
   }
 }
 
-const ProblemPage: React.FC<ProblemPageProps> = () => {
+const ProblemPage = () => {
 
   const [problem, setProblem] = useState<Problem | null>(null);
   const [proload,setproload]=useState<boolean>(true);
