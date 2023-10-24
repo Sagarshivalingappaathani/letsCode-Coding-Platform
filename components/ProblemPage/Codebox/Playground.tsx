@@ -127,7 +127,7 @@ const Playground: React.FC<PlaygroundProps> = (props: PlaygroundProps) => {
 			setSubmissionStatus("success");
 			setFeedbackMessage("Congratulations! Problem submitted successfully.");
 			setResults(output);
-			useUpdatedoc(user,props.problem.id,props.problem.difficulty);
+			Updatedoc(user,props.problem.id,props.problem.difficulty);
 		}else{
 			setSubmissionStatus("failed");
 			setFeedbackMessage("try again your solution is not correct for the all test case");
@@ -322,7 +322,7 @@ function useGetdetails(user:any,setUser: React.Dispatch<React.SetStateAction<any
 
 }
 
-async function useUpdatedoc(user:any, id:string, difficulty:string) {
+async function Updatedoc(user:any, id:string, difficulty:string) {
 	difficulty = difficulty.toLowerCase();
   
 	const collectionRef = collection(firestore, "users");
