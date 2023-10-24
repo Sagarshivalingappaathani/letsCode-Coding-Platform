@@ -1,65 +1,63 @@
-"use client"
-import { useEffect, useState } from "react";
-import Contest from "../../../components/contestpage/Contestpage";
+"use client";
+import Workspace from "../../../components/contestpage/Contestpage";
 import { problems } from "../../../data/Problems/index";
 import { Problem } from "../../../data/types/problem";
-import '../../styles/global.css';
+import React, { useEffect,useState } from "react";
+import '../../../styles/global.css';
 
 type ProblemPageProps = {
-  problem: Problem | null;
+	problem: Problem|null;
 };
 
-const ProblemPage: React.FC<ProblemPageProps> = ({ problem }) => {
-  const [proload, setproload] = useState(false);
+
+function getProblem(id:string|undefined) {
+  if(id!==undefined){
+    const problem = problems[id];
+    return problem
+    
+  }
+}
+
+const ProblemPage: React.FC<ProblemPageProps> = () => {
+
+  const [problem, setProblem] = useState<Problem | null>(null);
+  const [proload,setproload]=useState<boolean>(true);
 
   useEffect(() => {
-    // You can also fetch additional data here if needed
-
-    if (!problem) {
-      setproload(true);
-
-      // Simulate a loading delay (remove this in production)
-      setTimeout(() => {
-        setproload(false);
-      }, 1000);
+    const dynamicSegment = window.location.pathname.split("/").pop();
+    const problemData = getProblem(dynamicSegment);
+    if (problemData) {
+      setProblem(problemData);
+      setproload(false);
     }
-  }, [problem]);
+  }, []);
 
   if (!problem) {
     return (
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }} className="mt-60">
-        <span className="flex justify-center items-center loader"></span>
-      </div>
-    );
-  }
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center'}} className="mt-60">
+            <span className="flex justify-center items-center loader"></span>
+          </div>
+        )
+	  }
+  
 
-  return (
-    <>
-      {proload && (
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }} className="mt-60">
-          <span className="flex justify-center items-center loader"></span>
-        </div>
-      )}
-      {!proload && <Contest problem={problem} />}
-    </>
-  );
+	return (
+      <>
+        {proload && 
+           (
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center'}} className="mt-60">
+              <span className="flex justify-center items-center loader"></span>
+            </div>
+          )
+        }
+        {
+          !proload && <Workspace problem={problem} />
+        }
+			  
+      </>
+	);
 };
 
-export async function getServerSideProps(context: any) {
-  const dynamicSegment = context.params.id;
-  const problemData = problems[dynamicSegment];
-
-  if (!problemData) {
-    return {
-      notFound: true,
-    };
-  }
-
-  return {
-    props: {
-      problem: problemData,
-    },
-  };
-}
-
 export default ProblemPage;
+
+
