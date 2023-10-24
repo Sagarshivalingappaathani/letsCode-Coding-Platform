@@ -27,6 +27,13 @@ const Home = () => (
     </section>
     <div className='my-10'></div>
     <Courses/>
+    <footer className='bg-black text-white py-4 mt-10'>
+      <div className='container mx-auto px-4 text-center'>
+        <div className='text-2xl font-semibold mb-2'>Connect with Us</div>
+        <div className='mt-2'>&copy; 2023 letsCode. All rights reserved.</div>
+        <div className='mt-2'>letsCode0418@gmail.com</div>
+      </div>
+    </footer>
   </>
 );
 
