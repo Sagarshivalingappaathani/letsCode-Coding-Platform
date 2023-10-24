@@ -9,7 +9,7 @@ import { collection, doc, getDoc, getDocs, where, getFirestore, orderBy, query }
 
 type Props = {}
 
-const page = (props: Props) => {
+const Page = (props: Props) => {
     const [rulespage,setrulespage]=useState<boolean>(true)
     const [loadingProblem,setLoadingProblem]=useState<boolean>(true)
     const problem=useGetProblem(loadingProblem,setLoadingProblem);
@@ -27,11 +27,11 @@ const page = (props: Props) => {
                     </button>
                 </div>
                 <div>
-                        <p className='font-bold m-3'>1) In contest only one problem is there</p>
-                        <p className='font-bold m-3'>2) You can submit your code in any programming language you like.</p>
-                        <p className='font-bold m-3'>3) The time limit for each submission will be 15 minutes. If the solution does not get accepted within this period, it will not be accepted.</p>
-                        <p className='font-bold m-3'>4) Plagiarism is strictly prohibited. Submissions found to be copied from other sources will be disqualified.</p>
-                        <p className='font-bold m-3'>5) Respect the code of conduct. Any form of cheating or unethical behavior will result in immediate disqualification.</p>
+                        <p className='font-bold m-3'>1. In contest only one problem is there</p>
+                        <p className='font-bold m-3'>2. You can submit your code in any programming language you like.</p>
+                        <p className='font-bold m-3'>3. The time limit for each submission will be 15 minutes. If the solution does not get accepted within this period, it will not be accepted.</p>
+                        <p className='font-bold m-3'>4. Plagiarism is strictly prohibited. Submissions found to be copied from other sources will be disqualified.</p>
+                        <p className='font-bold m-3'>5. Respect the code of conduct. Any form of cheating or unethical behavior will result in immediate disqualification.</p>
                 </div>
                 <div>
                 <button className=" mt-8 cursor-pointer text-white font-bold shadow-md hover:scale-[1.2] shadow-purple-400 rounded-full px-5 py-2 bg-gradient-to-bl from-purple-500 to-purple-800"
@@ -71,7 +71,7 @@ const page = (props: Props) => {
   )
 }
 
-export default page
+export default Page
 
 function useGetProblem(loadingProblems:boolean,setLoadingProblems: React.Dispatch<React.SetStateAction<boolean>>) {
 	const [problem, setProblems] = useState<any>(null);
