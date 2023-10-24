@@ -5,10 +5,6 @@ import { Problem } from "../../../data/types/problem";
 import React, { useEffect,useState } from "react";
 import '../../../styles/global.css';
 
-type ProblemProps = {
-};
-
-
 function getProblem(id:string|undefined) {
   if(id!==undefined){
     const problem = problems[id];
@@ -17,7 +13,7 @@ function getProblem(id:string|undefined) {
   }
 }
 
-const ProblemPage: React.FC<ProblemProps> = () => {
+const ProblemPage= () => {
 
   const [problem, setProblem] = useState<Problem | null>(null);
   const [proload,setproload]=useState<boolean>(true);
