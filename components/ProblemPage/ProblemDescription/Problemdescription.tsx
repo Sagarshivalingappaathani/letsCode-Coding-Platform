@@ -8,12 +8,15 @@ type ProblemDescriptionProps = {
 };
 
 const ProblemDescription: React.FC<ProblemDescriptionProps> = (props:ProblemDescriptionProps) => {
+	
+	const [desc,setdesc]=useState<boolean>(true);
+
 	if (!props.problem) {
 		console.error("props.problem is null or undefined");
 		return <div>No problem data available.</div>;
 	  }
 
-	const [desc,setdesc]=useState<boolean>(true);
+	
   
 	return (
 		<div className='bg-white-layer-1 ml-4 mb-12 rounded-md shadow-lg border border-gray-300 mr-4 ' style={{ transform: 'rotateX(2deg) rotateY(2deg)' }}>
@@ -69,7 +72,6 @@ const ProblemDescription: React.FC<ProblemDescriptionProps> = (props:ProblemDesc
 							
 							<div key={example.id} className="bg-white p-4 rounded-md shadow-md mb-4">
 							<p className='font-medium text-lg'>Example {index + 1}: </p>
-							{example.img && <img src={example.img} alt='' className='mt-3' />}
 							<div className='example-card'>
 								<pre>
 								<strong className=''>Input: </strong> {example.inputText}

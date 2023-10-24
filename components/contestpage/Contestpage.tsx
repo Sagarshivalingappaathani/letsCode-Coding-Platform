@@ -10,8 +10,10 @@ type Props = {
   
 };
 
-const workSpace = (props: Props) => {
+const Contest = (props: Props) => {
+
   const [time,settime]=useState<number>(0);
+
   return (
     <>
       <main className="w-full ">
@@ -24,7 +26,7 @@ const workSpace = (props: Props) => {
   );
 };
 
-export default workSpace;
+export default Contest;
 
 
 

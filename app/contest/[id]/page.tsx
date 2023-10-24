@@ -1,6 +1,6 @@
 "use client";
 
-import Workspace from "../../../components/contestpage/Contestpage";
+import Contest from "../../../components/contestpage/Contestpage";
 import { problems } from "../../../data/Problems/index";
 import { Problem } from "../../../data/types/problem";
 import React, { useEffect,useState } from "react";
@@ -12,7 +12,7 @@ type ProblemPageProps = {
 
 // getStaticProps => it fetch the data
 
-function getStaticProps(id:string|undefined) {
+function useGetstaticprops(id:string|undefined) {
   if(id!==undefined){
     const problem = problems[id];
     return problem
@@ -27,7 +27,7 @@ const ProblemPage: React.FC<ProblemPageProps> = () => {
 
   useEffect(() => {
     const dynamicSegment = window.location.pathname.split("/").pop();
-    const problemData = getStaticProps(dynamicSegment);
+    const problemData = useGetstaticprops(dynamicSegment);
     if (problemData) {
       setProblem(problemData);
       setproload(false);
@@ -53,7 +53,7 @@ const ProblemPage: React.FC<ProblemPageProps> = () => {
           )
         }
         {
-          !proload && <Workspace problem={problem} />
+          !proload && <Contest problem={problem} />
         }
 			  
       </>
