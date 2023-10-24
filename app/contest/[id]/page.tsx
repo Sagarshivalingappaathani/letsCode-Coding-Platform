@@ -1,3 +1,4 @@
+"use client"
 import { useEffect, useState } from "react";
 import Contest from "../../../components/contestpage/Contestpage";
 import { problems } from "../../../data/Problems/index";
