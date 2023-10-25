@@ -1,37 +1,62 @@
-/*This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# letsCode
+- Welcome to the live demonstration of our app, where you can experience the magic in action. Dive in and explore the future, all in one click. 
+- [Explore the live demo →](https://lets-code-pink.vercel.app/)
 
-## Getting Started
+## Prerequisites
 
-First, run the development server:
+Before you begin, ensure you have met the following requirements:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Node.js installed on your machine
+- FireBase SetUp to store the problems and users Details
+- Google and Github Developer Console credentials for OAuth2.0 (client ID and client secret)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Clone the repository:**
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+   ```
+   git clone https://github.com/Sagarshivalingappaathani/letsCode.git
+   ```
+2. **Change Directory:**
 
-## Learn More
+   ```
+   cd letsCode
+   ```
+3. **Install project dependencies:**
 
-To learn more about Next.js, take a look at the following resources:
+   ```
+    npm install
+   ```
+4. **Create a .env file in the project root and add your environment variables:**
+   ```
+    FIREBASE_API_KEY=YOUR_API_KEY
+    FIREBASE_AUTH_DOMAIN=YOUR_AUTH_DOMAIN
+    FIREBASE_PROJECT_ID=YOUR_PROJECT_ID
+    FIREBASE_STORAGE_BUCKET=YOUR_STORAGE_BUCKET
+    FIREBASE_MESSAGING_SENDER_ID=YOUR_MESSAGING_SENDER_ID
+    FIREBASE_APP_ID=YOUR_APP_ID
+    FIREBASE_MEASUREMENT_ID=YOUR_MEASUREMENT_ID
+    X_RAPIDAPI_KEY=YOUR_X_RAPIDAPI_KEY
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+5. **Start the application:**
 
-## Deploy on Vercel
+   ```
+   npm run dev
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-*/
+
+ 
+
+### References used :
+<br>
+
+1. Next.js Documentation
+2. Tailwind Css
+3. some YouTube Videos
+4. Google
+5. freecodecamp
+
+<br>
+
