@@ -2,18 +2,14 @@
 - Welcome to the live demonstration of our app, where you can experience the magic in action. Dive in and explore the future, all in one click. 
 - [Explore the live demo →](https://lets-code-pink.vercel.app/)
 
-<details>
-<summary><strong>Prerequisites</strong></summary>
+### Prerequisites
 Before you begin, ensure you have met the following requirements:
 
 - **Node.js installed on your machine**
 - **Firebase Setup:** to store problems and users' details
 - **Google and Github Developer Console credentials for OAuth2.0 (client ID and client secret)**
-</details>
 
-<details>
-<summary><strong>Installation</strong></summary>
-</details>
+
 ## Installation
 
 1. **Clone the repository:**
@@ -48,13 +44,14 @@ Before you begin, ensure you have met the following requirements:
    ```
    npm run dev
    ```
+   
 ### Features Implemented in the project 
 
 1. **Authorization**
    - Email and Password Authentication
    - Sign In and Sign Up through Google and Github
 
-2. **Problem Solving**
+2. **Problems along with solution**
    - Added 8 challenging problems along with solutions
 
 3. **Code Execution**
@@ -72,17 +69,45 @@ Before you begin, ensure you have met the following requirements:
    - Problem distribution statistics using a pie chart (easy, medium, hard problems solved)
    - Displaying all solved problems
    - User activity log and calendar
+  
+
+### Upcoming Features
+
+- **User Forums:** Create a community for users to discuss problems, solutions, and coding strategies.
+
+- **Real-time Code Collaboration:** Implement real-time collaborative code editing and debugging.
+
+- **Leaderboards:** Add leaderboards to track user progress and encourage friendly competition.
+
+- **In-Depth Analytics:** Provide detailed analytics on user performance and learning progress.
+
+- **User Profile Customization:** Enable users to customize their profiles with avatars, bios, and more.
+
+- **Dark Mode:** Implement a dark mode for users who prefer it.
 
 
+## Tech Stack:
 
-### References used :
-<br>
+- TypeScript (TS): A statically typed superset of JavaScript for enhanced code quality and developer experience.
+- JavaScript (JS): The core programming language used for web development.
+- React: A popular JavaScript library for building user interfaces.
+- Next.js: A React framework for server-rendered applications with routing and other features.
+- Tailwind CSS: A utility-first CSS framework for fast and responsive web development.
+- Firebase: A cloud-based platform for building web and mobile applications, used for authentication and data storage.
+- Judge0 API: An API for executing and evaluating code submissions in various programming languages.
 
-1. Next.js Documentation
-2. Tailwind Css
-3. some YouTube Videos
-4. Google
-5. freecodecamp
+
+<details>
+<summary><strong>References used</strong></summary>
+
+- Next.js Documentation
+- Tailwind CSS
+- Various YouTube tutorials
+- Google's invaluable support
+- FreeCodeCamp
+
+</details>
+
 
 <br>
 
