@@ -2,14 +2,18 @@
 - Welcome to the live demonstration of our app, where you can experience the magic in action. Dive in and explore the future, all in one click. 
 - [Explore the live demo →](https://lets-code-pink.vercel.app/)
 
-## Prerequisites
-
+<details>
+<summary><strong>Prerequisites</strong></summary>
 Before you begin, ensure you have met the following requirements:
 
-- Node.js installed on your machine
-- FireBase SetUp to store the problems and users Details
-- Google and Github Developer Console credentials for OAuth2.0 (client ID and client secret)
+- **Node.js installed on your machine**
+- **Firebase Setup:** to store problems and users' details
+- **Google and Github Developer Console credentials for OAuth2.0 (client ID and client secret)**
+</details>
 
+<details>
+<summary><strong>Installation</strong></summary>
+</details>
 ## Installation
 
 1. **Clone the repository:**
