@@ -7,6 +7,10 @@ import '../../../styles/global.css';
 import { Problem } from '../../../data/types/problem';
 import EditorFooter from './EditorFooter';
 import PreferenceNav from './PreferenceNav';
+import {app,firestore} from "../../../firebaseConfig"
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { collection, doc, getDoc, getDocs,updateDoc, where, getFirestore, orderBy, query,arrayUnion} from "firebase/firestore";
+
 
 type PlaygroundProps = {
   problem: Problem;
@@ -25,6 +29,9 @@ const Playground: React.FC<PlaygroundProps> = (props: PlaygroundProps) => {
   const [feedbackMessage, setFeedbackMessage] = useState<string>("");
   const [results, setResults] = useState<string>("");
   const [timeover,settimeover]=useState<boolean>(false);
+  const [user,setUser]=useState<any>(null)
+
+  const temp=useGetdetails(user,setUser);
 
   useEffect(() => {
     const boilerCode = props.problem.starterCode[langid].name;
@@ -33,7 +40,7 @@ const Playground: React.FC<PlaygroundProps> = (props: PlaygroundProps) => {
 
   useEffect(()=>{
 	console.log(props.time);
-	if(props.time>30){
+	if(props.time>900){
 		settimeover(true);
 	}
 
@@ -55,6 +62,12 @@ const Playground: React.FC<PlaygroundProps> = (props: PlaygroundProps) => {
   
 
   async function handlesubmit() {
+
+	if(!user){
+		alert("please login to submit code")
+		return;
+	}
+
     setSubmissionStatus("loading");
     setFeedbackMessage("Submitting your code...");
 
@@ -125,6 +138,7 @@ const Playground: React.FC<PlaygroundProps> = (props: PlaygroundProps) => {
 			setSubmissionStatus("success");
 			setFeedbackMessage("Congratulations! Problem submitted successfully.");
 			setResults(output);
+			Updatedoc(user,props.problem.id,props.problem.difficulty);
 		}else{
 			setSubmissionStatus("failed");
 			setFeedbackMessage("try again your solution is not correct for the all test case");
@@ -327,3 +341,93 @@ return (
 };
 
 export default Playground;
+
+function useGetdetails(user:any,setUser: React.Dispatch<React.SetStateAction<any>>){
+	
+	const fetchUserDetails = async (email:string|null) => {
+	  const db = getFirestore(app);
+	  const usersCollection = collection(db, 'users'); 
+	
+	  const q = query(usersCollection, where('email', '==', email));
+	
+	  try {
+		const querySnapshot = await getDocs(q);
+		if (!querySnapshot.empty) {
+			querySnapshot.forEach((doc) => {
+			const userData = doc.data();
+			setUser(userData);
+		  });
+		} else {
+		  console.log('No user found with this email.');
+		}
+	  } catch (error) {
+		console.error('Error fetching user details:', error);
+	  }
+	};
+	
+	useEffect(() => {
+	  const auth = getAuth(app);
+	
+	  const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+		if (currentUser) {
+		  const userEmail = currentUser.email;
+		  fetchUserDetails(userEmail);
+		} else {
+		  setUser(null);
+		}
+	  });
+	
+	  return () => unsubscribe(); 
+	}, [user]);
+  
+	return user|| null;
+  
+  }
+  
+  async function Updatedoc(user:any, id:string, difficulty:string) {
+	  difficulty = difficulty.toLowerCase();
+	
+	  const collectionRef = collection(firestore, "users");
+	  const docToupdate = doc(firestore, "users", user.uid);
+	
+	  const updatedSolvedProbs = { ...user.solvedprob };
+	  updatedSolvedProbs[difficulty] = (updatedSolvedProbs[difficulty] || 0) + 1;
+	
+	  const today = new Date();
+	  today.setHours(0, 0, 0, 0); 
+	  let todayIndex :any;
+	  if(user.ActivityInd){
+		  todayIndex = user.ActivityInd.findIndex((entry:any) => {
+			  if (entry.date) {
+				  const firestoreTimestamp =entry.date;
+				  const date = new Date(firestoreTimestamp.seconds * 1000); 
+				  console.log(date.getDate())
+				  console.log(new Date().getDate())
+					return date.getDate() == new Date().getDate();
+			  }
+			  return false; 
+			});
+	  }
+	  
+	  const updatedActivityInd = [...user.ActivityInd];
+	
+	  if (todayIndex!==-1) {
+		updatedActivityInd[todayIndex].count += 1;
+	  } else {
+		updatedActivityInd.push({ date: today, count: 1 });
+	  }
+	
+	  const updateData = {
+		solvedProblems: arrayUnion(id),
+		solvedprob: updatedSolvedProbs,
+		ActivityInd: updatedActivityInd,
+		contest:user.contest+1
+	  };
+	
+	  try {
+		await updateDoc(docToupdate, updateData);
+		console.log('Updated successfully');
+	  } catch (err) {
+		console.error(err);
+	  }
+	}

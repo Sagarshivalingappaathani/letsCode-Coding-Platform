@@ -36,6 +36,7 @@ const Register: React.FC = () => {
                         medium: 0,
                         hard: 0,
                       },
+                    contest:0,
                     ActivityInd:[
                         {
                             date:new Date(),
@@ -70,6 +71,7 @@ const Register: React.FC = () => {
                         medium: 0,
                         hard: 0,
                       },
+                      contest:0,
                       ActivityInd:[
                           {
                               date:new Date(),
@@ -102,6 +104,7 @@ const Register: React.FC = () => {
                         medium: 0,
                         hard: 0,
                       },
+                      contest:0,
                       ActivityInd:[
                           {
                               date:new Date(),

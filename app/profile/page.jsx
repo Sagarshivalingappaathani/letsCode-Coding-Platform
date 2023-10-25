@@ -150,6 +150,10 @@ const heatmapData = dateRange.map((date) => {
             <span>{user?.displayName}</span>
             <p>{user?.email}</p>
           </div>
+          <div>
+          <p className='text-bold text-yellow-500'>Solved Problems:<span className='text-blue-500 ml-2'>{user?.solvedProblems.length}</span></p>
+            <p className='text-bold text-yellow-500'>Contest:<span className='text-blue-500 ml-2'>{user?.contest}</span></p>
+          </div>
         </div>
         <div className="mt-2 bg-white p-2 rounded-lg shadow-md border border-gray-300">
           <h2 className="text-2xl font-semibold text-center text-indigo-700 mb-2">
