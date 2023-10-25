@@ -97,8 +97,7 @@ Before you begin, ensure you have met the following requirements:
 - Judge0 API: An API for executing and evaluating code submissions in various programming languages.
 
 
-<details>
-<summary><strong>References used</strong></summary>
+### References used
 
 - Next.js Documentation
 - Tailwind CSS
@@ -106,8 +105,8 @@ Before you begin, ensure you have met the following requirements:
 - Google's invaluable support
 - FreeCodeCamp
 
-</details>
-
-
 <br>
+
+**🌟Thank you for embarking on this coding journey with us! We're thrilled to have you on board and can't wait to see the incredible code you'll craft with letsCode. Happy coding and let's build a brighter future together!**
+
 
