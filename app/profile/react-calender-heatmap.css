@@ -4,10 +4,10 @@
 }
 
 .react-calendar-heatmap rect {
-  fill: #8c8b8b; /* Light gray for days with a count of 0 */
-  stroke: #fff; /* Optional: Add a white border to the boxes */
-  stroke-width: 2px; /* Optional: Adjust the border width as needed */
-  border-radius: 10px; /* Make the border rounded */
+  fill: #8c8b8b; 
+  stroke: #fff; 
+  stroke-width: 2px; 
+  border-radius: 10px; 
 }
 
 

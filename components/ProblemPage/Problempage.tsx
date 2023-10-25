@@ -3,10 +3,10 @@ import Split from 'react-split';
 import '../../styles/global.css';
 import ProblemDescription from './ProblemDescription/Problemdescription';
 import ProblemGround from './Codebox/Playground';
-import { Problem } from '../../data/types/problem'; // Import the Problem type
+import { Problem } from '../../data/types/problem'; 
 
 type Props = {
-  problem: Problem ; // Define the problem prop
+  problem: Problem ; 
 };
 
 const workSpace = (props: Props) => {

@@ -52,4 +52,3 @@ export default function Home() {
   );
 }
 
-// Rest of your code

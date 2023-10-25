@@ -80,7 +80,6 @@ const simplifiedData = data?.map((timestamp) => {
 //console.log(simplifiedData);
 
 
-  // Create an array of dates within the specified range
 const dateRange = [];
 const currentDate = new Date(sixMonthsAgo);
 
@@ -101,7 +100,7 @@ const heatmapData = dateRange.map((date) => {
   });
 
   return {
-    date: date.toISOString().split('T')[0], // Extract the date in 'YYYY-MM-DD' format
+    date: date.toISOString().split('T')[0], 
     count: matchingData ? matchingData.count : 0,
   };
 });

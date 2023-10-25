@@ -4,9 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* 
-  Note: The styles for this gradient grid background is heavily inspired by the creator of this amazing site (https://dub.sh) – all credits go to them! 
-*/
 
 .main {
   width: 100%;
@@ -161,9 +158,9 @@
   align-items: center;
   width: 50px;
   height: 50px;
-  background-color: #d0cbcb; /* Light gray background color */
-  border-radius: 50%; /* Rounded shape */
-  overflow: hidden; /* Hide overflowing icons */
+  background-color: #d0cbcb; 
+  border-radius: 50%; 
+  overflow: hidden; 
 }
 
 .loader {
@@ -174,21 +171,21 @@
   margin: 0 5px;
 }
 
-/* Add styles for the spinning icons, e.g., Font Awesome classes */
+
 
 .btn-grad-sm {
   background-image: linear-gradient(to right, #38fb16 0%, #66d475 51%, #0a9111 100%);
   margin: 10px;
-  padding: 5px 10px; /* Adjust the padding to make it smaller */
+  padding: 5px 10px; 
   text-align: center;
   text-transform: uppercase;
   transition: 0.5s;
   background-size: 200% auto;
   color: white;
-  box-shadow: 0 0 10px #eee; /* Adjust the box shadow */
-  border-radius: 5px; /* Adjust the border radius */
-  display: inline-block; /* Change to inline-block to make it inline with text */
-  text-decoration: none; /* Add this to remove underlines by default */
+  box-shadow: 0 0 10px #eee; 
+  border-radius: 5px; 
+  display: inline-block; 
+  text-decoration: none; 
 }
 
 .btn-grad-sm:hover {
@@ -213,7 +210,7 @@
 }
 
 .btn-grad:hover {
-  background-position: right center; /* change the direction of the change here */
+  background-position: right center; 
   color: #fff;
   text-decoration: none;
 }

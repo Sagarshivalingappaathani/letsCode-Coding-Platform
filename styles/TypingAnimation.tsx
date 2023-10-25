@@ -25,7 +25,7 @@ const TypingAnimation: React.FC<TypingAnimationProps> = ({ text, speed, delay })
           setTimeout(() => {
             setIsTyping(true);
             setTypedText('');
-            setTypingIndex(0); // Reset typing index
+            setTypingIndex(0); 
           }, delay);
         }
       } else {
@@ -33,7 +33,7 @@ const TypingAnimation: React.FC<TypingAnimationProps> = ({ text, speed, delay })
           setTypedText((prevText) => prevText.slice(0, -1));
         } else {
           setIsTyping(true);
-          setTypingIndex(0); // Reset typing index
+          setTypingIndex(0); 
         }
       }
     };
