@@ -6,6 +6,8 @@ type ProblemDescriptionProps = {
 	problem:Problem
 	time:number
 	settime: React.Dispatch<React.SetStateAction<number>>;
+	timeover:boolean
+	settimeover: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
 const ProblemDescription: React.FC<ProblemDescriptionProps> = (props:ProblemDescriptionProps) => {
@@ -22,7 +24,7 @@ const ProblemDescription: React.FC<ProblemDescriptionProps> = (props:ProblemDesc
 						<button className="cursor-pointer text-orange-600 font-bold shadow-md px-5 rounded-xl mr-10"
 						>
 						Description</button>
-                        <Timer time={props.time} settime={props.settime}/>
+                        {!props.timeover && <Timer time={props.time} settime={props.settime}/>}
 					</div>
 				
 					<div>

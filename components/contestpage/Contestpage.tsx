@@ -13,13 +13,14 @@ type Props = {
 const Contest = (props: Props) => {
 
   const [time,settime]=useState<number>(0);
+  const [timeover,settimeover]=useState<boolean>(false);
 
   return (
     <>
       <main className="w-full ">
           <Split className='split' minSize={0}>
-            <ProblemDescription problem={props.problem} time={time} settime={settime}/>
-            <ProblemGround problem={props.problem} time={time} settime={settime}/>
+            <ProblemDescription problem={props.problem} time={time} settime={settime} timeover={timeover} settimeover={settimeover}/>
+            <ProblemGround problem={props.problem} time={time} settime={settime} timeover={timeover} settimeover={settimeover}/>
           </Split>
       </main>
     </>
