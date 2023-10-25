@@ -42,7 +42,7 @@ const Playground: React.FC<PlaygroundProps> = (props: PlaygroundProps) => {
 
   useEffect(()=>{
 	console.log(props.time);
-	if(props.time>30){
+	if(props.time>900){
 		props.settimeover(true);
 	}
 
