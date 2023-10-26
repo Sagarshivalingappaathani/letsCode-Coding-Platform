@@ -73,17 +73,17 @@ Before you begin, ensure you have met the following requirements:
 
 ### Upcoming Features
 
-- **User Forums:** Create a community for users to discuss problems, solutions, and coding strategies.
+- **User Forums:** Createing a community for users to discuss problems, solutions, and coding strategies.
 
-- **Real-time Code Collaboration:** Implement real-time collaborative code editing and debugging.
+- **Real-time Code Collaboration:** Implementing real-time collaborative code editing and debugging.
 
-- **Leaderboards:** Add leaderboards to track user progress and encourage friendly competition.
+- **Leaderboards:** Adding leaderboards to track user progress and encourage friendly competition.
 
-- **In-Depth Analytics:** Provide detailed analytics on user performance and learning progress.
+- **In-Depth Analytics:** Provideing detailed analytics on user performance and learning progress.
 
 - **User Profile Customization:** Enable users to customize their profiles with avatars, bios, and more.
 
-- **Dark Mode:** Implement a dark mode for users who prefer it.
+- **Dark Mode:** Implementing the dark mode for users who prefer it.
 
 
 ## Tech Stack:
