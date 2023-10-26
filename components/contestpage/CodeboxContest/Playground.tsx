@@ -85,7 +85,7 @@ const Playground: React.FC<PlaygroundProps> = (props: PlaygroundProps) => {
 				method: "POST",
 				headers: {
 				  "x-rapidapi-host": "judge0-ce.p.rapidapi.com",
-				  "x-rapidapi-key": "fa178112d0msh9afb473ff9559fdp1fd950jsn45803dd3953d", 
+				  "x-rapidapi-key": "169e00daccmsh0efd26725246674p1c43ebjsn3f5256a3b0ea", 
 				  "content-type": "application/json",
 				  accept: "application/json",
 				},
@@ -123,7 +123,7 @@ const Playground: React.FC<PlaygroundProps> = (props: PlaygroundProps) => {
 				method: "GET",
 				headers: {
 				  "x-rapidapi-host": "judge0-ce.p.rapidapi.com",
-				  "x-rapidapi-key": "fa178112d0msh9afb473ff9559fdp1fd950jsn45803dd3953d", 
+				  "x-rapidapi-key": "169e00daccmsh0efd26725246674p1c43ebjsn3f5256a3b0ea", 
 				  "content-type": "application/json",
 				},
 			  });
@@ -167,6 +167,7 @@ const Playground: React.FC<PlaygroundProps> = (props: PlaygroundProps) => {
         }
       }
     } catch {
+	  alert("api daily limit reached");
       setSubmissionStatus("error");
       setFeedbackMessage("Error Creating Submission");
     }

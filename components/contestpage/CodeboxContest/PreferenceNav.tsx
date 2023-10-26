@@ -23,7 +23,7 @@ const PreferenceNav: React.FC<PreferenceNavProps> = ({ lang, setLang ,langid,set
                 }else{
                   setlangid(1);
                 }
-                setLang(e.target.value)}} // Use the setLang function here
+                setLang(e.target.value)}} 
               id="tags"
               className="language-select text-black w-20"
             >

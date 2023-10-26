@@ -72,7 +72,7 @@ const Playground: React.FC<PlaygroundProps> = (props: PlaygroundProps) => {
 				method: "POST",
 				headers: {
 				  "x-rapidapi-host": "judge0-ce.p.rapidapi.com",
-				  "x-rapidapi-key": "eb318dba23mshf8f373d7d20e43dp1e7a93jsn925d441a53d6", 
+				  "x-rapidapi-key": "169e00daccmsh0efd26725246674p1c43ebjsn3f5256a3b0ea", 
 				  "content-type": "application/json",
 				  accept: "application/json",
 				},
@@ -110,7 +110,7 @@ const Playground: React.FC<PlaygroundProps> = (props: PlaygroundProps) => {
 				method: "GET",
 				headers: {
 				  "x-rapidapi-host": "judge0-ce.p.rapidapi.com",
-				  "x-rapidapi-key": "eb318dba23mshf8f373d7d20e43dp1e7a93jsn925d441a53d6", // Get yours for free at https://rapidapi.com/judge0-official/api/judge0-ce/
+				  "x-rapidapi-key": "169e00daccmsh0efd26725246674p1c43ebjsn3f5256a3b0ea", // Get yours for free at https://rapidapi.com/judge0-official/api/judge0-ce/
 				  "content-type": "application/json",
 				},
 			  });
@@ -151,7 +151,7 @@ const Playground: React.FC<PlaygroundProps> = (props: PlaygroundProps) => {
         }
       }
     } catch {
-	  alert("error at")
+	  alert("Error Creating Submission:api Daily limit reached")
       setSubmissionStatus("error");
       setFeedbackMessage("Error Creating Submission");
     }

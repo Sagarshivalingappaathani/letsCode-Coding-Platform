@@ -6,7 +6,7 @@ import ProblemGround from './CodeboxContest/Playground';
 import { Problem } from '../../data/types/problem'; 
 
 type Props = {
-  problem: Problem ; // Define the problem prop
+  problem: Problem ; 
   
 };
 
