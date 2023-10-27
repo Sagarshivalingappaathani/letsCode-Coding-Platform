@@ -1,7 +1,7 @@
 # letsCode
 - Welcome to the live demonstration of our app, where you can experience the magic in action. Dive in and explore the future, all in one click. 
 - [Explore the live demo →](https://lets-code-pink.vercel.app/)
-
+- [Explore the live demo video →](https://drive.google.com/file/d/1b6wULCzkEKA2btWt-lFQVfIKv9Izq5ET/view?usp=drive_link)
 ### Prerequisites
 Before you begin, ensure you have met the following requirements:
 
