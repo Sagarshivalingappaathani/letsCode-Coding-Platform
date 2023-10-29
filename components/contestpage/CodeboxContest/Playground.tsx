@@ -123,7 +123,7 @@ const Playground: React.FC<PlaygroundProps> = (props: PlaygroundProps) => {
 				method: "GET",
 				headers: {
 				  "x-rapidapi-host": "judge0-ce.p.rapidapi.com",
-				  "x-rapidapi-key": "169e00daccmsh0efd26725246674p1c43ebjsn3f5256a3b0ea", 
+				  "x-rapidapi-key": "169e00daccmsh0efd26725246674p1c43ebjsn3f5256a3b0ea" , 
 				  "content-type": "application/json",
 				},
 			  });
