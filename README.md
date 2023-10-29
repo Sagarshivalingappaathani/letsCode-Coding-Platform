@@ -52,7 +52,7 @@ Before you begin, ensure you have met the following requirements:
    - Sign In and Sign Up through Google and Github
 
 2. **Problems along with solution**
-   - Added 8 challenging problems along with solutions
+   - Added 8 challenging problems along with solutions in C++ and Java
 
 3. **Code Execution**
    - Utilizes the Judge0 API for running and evaluating code submissions
