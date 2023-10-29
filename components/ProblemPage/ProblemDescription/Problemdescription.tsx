@@ -68,8 +68,6 @@ const ProblemDescription: React.FC<ProblemDescriptionProps> = (props:ProblemDesc
 						{/* Examples */}
 						<div className='mt-4'>
 						{props.problem.examples.map((example, index) => (
-							
-							
 							<div key={example.id} className="bg-white p-4 rounded-md shadow-md mb-4">
 							<p className='font-medium text-lg'>Example {index + 1}: </p>
 							<div className='example-card'>
