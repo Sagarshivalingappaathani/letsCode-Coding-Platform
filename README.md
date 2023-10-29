@@ -1,6 +1,6 @@
 <img src="https://github.com/Sagarshivalingappaathani/letsCode/assets/121311033/e88b2239-2e5a-41f1-978d-6071f07d47a5" alt="logo" width="200" style="border-radius: 10px; margin: 10px;">
 
-- Welcome to the live demonstration of our app, where you can experience the magic in action. Dive in and explore the future, all in one click. 
+- Welcome to the live demonstration of our coding platform app, where you can experience the magic in action. Dive in and explore the future, all in one click. 
 - [Explore the live demo →](https://lets-code-pink.vercel.app/)
 - [Explore the live demo video →](https://drive.google.com/file/d/1b6wULCzkEKA2btWt-lFQVfIKv9Izq5ET/view?usp=drive_link)
 
