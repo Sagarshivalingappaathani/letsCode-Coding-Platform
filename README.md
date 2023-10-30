@@ -29,7 +29,7 @@ Before you begin, ensure you have met the following requirements:
    ```
     npm install
    ```
-4. **Create a .env file in the project root and add your environment variables:**
+4. **Create a .env file in the project root and add your environment variables how i made in .env.example file:**
    ```
     NEXT_PUBLIC_FIREBASE_API_KEY=YOUR_API_KEY
     NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=YOUR_AUTH_DOMAIN
