@@ -5,7 +5,7 @@
 -  Its primary purpose is to assist users in competitive coding. Users can solve coding problems and track their progress, including the number of problems they've solved in each topic.
 -   Additionally, they can participate in coding contests to further enhance their skills.
 - [Explore the live demo →](https://lets-code-pink.vercel.app/)
-- [Explore the live demo video →](https://drive.google.com/file/d/11EoiXoOJ81Gf1hK0niMqHj4u_eYmHAAi/view?usp=sharing)
+- [See the live demo video →](https://drive.google.com/file/d/11EoiXoOJ81Gf1hK0niMqHj4u_eYmHAAi/view?usp=sharing)
 
 ### Prerequisites
 Before you begin, ensure you have met the following requirements:
