@@ -90,13 +90,13 @@ Before you begin, ensure you have met the following requirements:
 
 ## Tech Stack:
 
-- TypeScript (TS): A statically typed superset of JavaScript for enhanced code quality and developer experience.
-- JavaScript (JS): The core programming language used for web development.
-- React: A popular JavaScript library for building user interfaces.
-- Next.js: A React framework for server-rendered applications with routing and other features.
-- Tailwind CSS: A utility-first CSS framework for fast and responsive web development.
-- Firebase: A cloud-based platform for building web and mobile applications, used for authentication and data storage.
-- Judge0 API: An API for executing and evaluating code submissions in various programming languages.
+- **TypeScript (TS):** A statically typed superset of JavaScript for enhanced code quality and developer experience.
+- **JavaScript (JS):** The core programming language used for web development.
+- **React:** A popular JavaScript library for building user interfaces.
+- **Next.js:** A React framework for server-rendered applications with routing and other features.
+- **Tailwind CSS:** A utility-first CSS framework for fast and responsive web development.
+- **Firebase:** A cloud-based platform for building web and mobile applications, used for authentication and data storage.
+- **Judge0 API:** An API for executing and evaluating code submissions in various programming languages.
 
 
 ### References used
