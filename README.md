@@ -7,7 +7,7 @@
 - [Explore the live demo →](https://lets-code-pink.vercel.app/)
 - [See the live demo video →](https://www.youtube.com/watch?v=iezi3JEZW10&t=306s)
 
-### Prerequisites
+### Prerequisites to Run this Project In your System
 Before you begin, ensure you have met the following requirements:
 
 - **Node.js installed on your machine**
