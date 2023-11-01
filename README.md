@@ -1,7 +1,12 @@
-# letsCode
-- Welcome to the live demonstration of our app, where you can experience the magic in action. Dive in and explore the future, all in one click. 
+<img src="https://github.com/Sagarshivalingappaathani/letsCode/assets/121311033/e88b2239-2e5a-41f1-978d-6071f07d47a5" alt="logo" width="200" style="border-radius: 10px; margin: 10px;">
+
+### Project Description:
+- This platform is designed to resemble popular coding websites such as LeetCode and GeeksforGeeks.
+-  Its primary purpose is to assist users in competitive coding. Users can solve coding problems and track their progress, including the number of problems they've solved in each topic.
+-   Additionally, they can participate in coding contests to further enhance their skills.
 - [Explore the live demo →](https://lets-code-pink.vercel.app/)
-- [Explore the live demo video →](https://drive.google.com/file/d/1b6wULCzkEKA2btWt-lFQVfIKv9Izq5ET/view?usp=drive_link)
+- [See the live demo video →](https://www.youtube.com/watch?v=iezi3JEZW10&t=306s)
+
 ### Prerequisites
 Before you begin, ensure you have met the following requirements:
 
@@ -27,16 +32,16 @@ Before you begin, ensure you have met the following requirements:
    ```
     npm install
    ```
-4. **Create a .env file in the project root and add your environment variables:**
+4. **Create a .env file in the project root and add your environment variables how i made in .env.example file:**
    ```
-    FIREBASE_API_KEY=YOUR_API_KEY
-    FIREBASE_AUTH_DOMAIN=YOUR_AUTH_DOMAIN
-    FIREBASE_PROJECT_ID=YOUR_PROJECT_ID
-    FIREBASE_STORAGE_BUCKET=YOUR_STORAGE_BUCKET
-    FIREBASE_MESSAGING_SENDER_ID=YOUR_MESSAGING_SENDER_ID
-    FIREBASE_APP_ID=YOUR_APP_ID
-    FIREBASE_MEASUREMENT_ID=YOUR_MEASUREMENT_ID
-    X_RAPIDAPI_KEY=YOUR_X_RAPIDAPI_KEY
+    NEXT_PUBLIC_FIREBASE_API_KEY=YOUR_API_KEY
+    NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=YOUR_AUTH_DOMAIN
+    NEXT_PUBLIC_FIREBASE_PROJECT_ID=YOUR_PROJECT_ID
+    NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=YOUR_STORAGE_BUCKET
+    NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=YOUR_MESSAGING_SENDER_ID
+    NEXT_PUBLIC_FIREBASE_APP_ID=YOUR_APP_ID
+    NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID=YOUR_MEASUREMENT_ID
+    NEXT_PUBLIC_X_RAPIDAPI_KEY=YOUR_X_RAPIDAPI_KEY
 
 
 5. **Start the application:**
@@ -88,13 +93,13 @@ Before you begin, ensure you have met the following requirements:
 
 ## Tech Stack:
 
-- TypeScript (TS): A statically typed superset of JavaScript for enhanced code quality and developer experience.
-- JavaScript (JS): The core programming language used for web development.
-- React: A popular JavaScript library for building user interfaces.
-- Next.js: A React framework for server-rendered applications with routing and other features.
-- Tailwind CSS: A utility-first CSS framework for fast and responsive web development.
-- Firebase: A cloud-based platform for building web and mobile applications, used for authentication and data storage.
-- Judge0 API: An API for executing and evaluating code submissions in various programming languages.
+- **TypeScript (TS):** A statically typed superset of JavaScript for enhanced code quality and developer experience.
+- **JavaScript (JS):** The core programming language used for web development.
+- **React:** A popular JavaScript library for building user interfaces.
+- **Next.js:** A React framework for server-rendered applications with routing and other features.
+- **Tailwind CSS:** A utility-first CSS framework for fast and responsive web development.
+- **Firebase:** A cloud-based platform for building web and mobile applications, used for authentication and data storage.
+- **Judge0 API:** An API for executing and evaluating code submissions in various programming languages.
 
 
 ### References used
