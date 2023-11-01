@@ -37,7 +37,7 @@ const Nav: React.FC = () => {
   return (
     <nav className="flex-between w-full mt-5 px-10">
       <div className="flex items-center justify-between w-full">
-        <div className="flex items-center gap-10">
+        <div className="flex items-center gap-10 ">
           <a href="/">
             <Image
               src="/assets/images/logo.jpg" 

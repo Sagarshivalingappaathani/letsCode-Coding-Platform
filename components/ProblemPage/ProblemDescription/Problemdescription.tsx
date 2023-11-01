@@ -23,13 +23,13 @@ const ProblemDescription: React.FC<ProblemDescriptionProps> = (props:ProblemDesc
 			<div className='flex px-0 py-4 overflow-y-auto h-[calc(100vh-94px)]'>
 				<div className='pl-5 pr-2'>
 					<div className='text-xl text-orange-600 mb-4 flex'>
-						<button className="cursor-pointer text-orange-600 font-bold shadow-md px-5 rounded-xl"
+						<button className="cursor-pointer text-orange-600 font-bold shadow-md px-5 rounded-xl hover:scale-105 hover:text-orange-700 "
 							onClick={(e)=>{
 								setdesc(true)
 							}}
 						>
 						Description</button>
-						<button className="ml-10 cursor-pointer text-orange-600 font-bold shadow-md px-5 rounded-xl"
+						<button className="ml-10 cursor-pointer text-orange-600 font-bold shadow-md px-5 rounded-xl hover:scale-105 hover:text-orange-700"
 							onClick={(e)=>{
 								setdesc(false)
 							}}
