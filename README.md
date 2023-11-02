@@ -4,7 +4,7 @@
 - This platform is designed to resemble popular coding websites such as LeetCode and GeeksforGeeks.
 -  Its primary purpose is to assist users in competitive coding. Users can solve coding problems and track their progress, including the number of problems they've solved in each topic.
 -   Additionally, they can participate in coding contests to further enhance their skills.
-- [Explore the live demo →](https://lets-code-pink.vercel.app/)
+- [Explore the live demo →](https://lets-code-pink.vercel.app/)(see this in desktop)
 - [See the live demo video →](https://www.youtube.com/watch?v=iezi3JEZW10&t=306s)
 
   
