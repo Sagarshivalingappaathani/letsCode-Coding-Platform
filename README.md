@@ -4,52 +4,10 @@
 - This platform is designed to resemble popular coding websites such as LeetCode and GeeksforGeeks.
 -  Its primary purpose is to assist users in competitive coding. Users can solve coding problems and track their progress, including the number of problems they've solved in each topic.
 -   Additionally, they can participate in coding contests to further enhance their skills.
-- [Explore the live demo →](https://lets-code-pink.vercel.app/)
+- [Explore the live demo →](https://lets-code-pink.vercel.app/)(see this in desktop)
 - [See the live demo video →](https://www.youtube.com/watch?v=iezi3JEZW10&t=306s)
 
-### Prerequisites
-Before you begin, ensure you have met the following requirements:
-
-- **Node.js installed on your machine**
-- **Firebase Setup:** to store problems and users' details
-- **Google and Github Developer Console credentials for OAuth2.0 (client ID and client secret)**
-
-
-## Installation
-
-1. **Clone the repository:**
-
-   ```
-   git clone https://github.com/Sagarshivalingappaathani/letsCode.git
-   ```
-2. **Change Directory:**
-
-   ```
-   cd letsCode
-   ```
-3. **Install project dependencies:**
-
-   ```
-    npm install
-   ```
-4. **Create a .env file in the project root and add your environment variables how i made in .env.example file:**
-   ```
-    NEXT_PUBLIC_FIREBASE_API_KEY=YOUR_API_KEY
-    NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=YOUR_AUTH_DOMAIN
-    NEXT_PUBLIC_FIREBASE_PROJECT_ID=YOUR_PROJECT_ID
-    NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=YOUR_STORAGE_BUCKET
-    NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=YOUR_MESSAGING_SENDER_ID
-    NEXT_PUBLIC_FIREBASE_APP_ID=YOUR_APP_ID
-    NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID=YOUR_MEASUREMENT_ID
-    NEXT_PUBLIC_X_RAPIDAPI_KEY=YOUR_X_RAPIDAPI_KEY
-
-
-5. **Start the application:**
-
-   ```
-   npm run dev
-   ```
-   
+  
 ### Features Implemented in the project 
 
 1. **Authorization**
@@ -100,6 +58,49 @@ Before you begin, ensure you have met the following requirements:
 - **Tailwind CSS:** A utility-first CSS framework for fast and responsive web development.
 - **Firebase:** A cloud-based platform for building web and mobile applications, used for authentication and data storage.
 - **Judge0 API:** An API for executing and evaluating code submissions in various programming languages.
+
+### Prerequisites to Run this Project In your System
+Before you begin, ensure you have met the following requirements:
+
+- **Node.js installed on your machine**
+- **Firebase Setup:** to store problems and users' details
+- **Google and Github Developer Console credentials for OAuth2.0 (client ID and client secret)**
+
+
+## Installation
+
+1. **Clone the repository:**
+
+   ```
+   git clone https://github.com/Sagarshivalingappaathani/letsCode.git
+   ```
+2. **Change Directory:**
+
+   ```
+   cd letsCode
+   ```
+3. **Install project dependencies:**
+
+   ```
+    npm install
+   ```
+4. **Create a .env file in the project root and add your environment variables how i made in .env.example file:**
+   ```
+    NEXT_PUBLIC_FIREBASE_API_KEY=YOUR_API_KEY
+    NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=YOUR_AUTH_DOMAIN
+    NEXT_PUBLIC_FIREBASE_PROJECT_ID=YOUR_PROJECT_ID
+    NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=YOUR_STORAGE_BUCKET
+    NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=YOUR_MESSAGING_SENDER_ID
+    NEXT_PUBLIC_FIREBASE_APP_ID=YOUR_APP_ID
+    NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID=YOUR_MEASUREMENT_ID
+    NEXT_PUBLIC_X_RAPIDAPI_KEY=YOUR_X_RAPIDAPI_KEY
+
+
+5. **Start the application:**
+
+   ```
+   npm run dev
+   ```
 
 
 ### References used
