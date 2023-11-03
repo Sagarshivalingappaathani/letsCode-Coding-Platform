@@ -7,6 +7,7 @@ import { noIsland } from "./no-island";
 import { postfix } from "./postfix";
 import { permutStr } from "./permut-str";
 import { pascalsTriangle } from "./pascals-triangle";
+import { numberOfWays } from "./number-of-ways-to-arrive-at-destination";
 
 interface ProblemMap {
 	[key: string]: Problem;
@@ -20,6 +21,7 @@ export const problems: ProblemMap = {
 	"no-island":noIsland,
 	"postfix":postfix,
 	"pasacals-triangle":pascalsTriangle,
-	"permut-str":permutStr
+	"permut-str":permutStr,
+	"number-of-ways-to-arrive-at-destination":numberOfWays
 
 };
