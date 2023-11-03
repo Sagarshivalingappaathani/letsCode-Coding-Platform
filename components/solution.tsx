@@ -30,10 +30,10 @@ const Solution: React.FC<Props> = ({ problem }) => {
       {problem.solutioncode.map((code: Solution, index: number) => (
         <div key={code.id} className="p-4">
           <h3 className="bg-green-500 text-white p-2 rounded-tl-lg rounded-tr-lg mb-2 flex justify-between">
-            <span className='text-left'>Solution in {index === 0 ? 'C++' : 'Java'}</span>
+            <span>Solution in {index === 0 ? 'C++' : 'Java'}</span>
             <button
                 onClick={() => handleCopyClick(code.name)}
-                className="bg-orange-500 text-white py-1 px-2 rounded hover:bg-orange-600 cursor-pointer"
+                className="bg-white text-green-500 py-1 px-2 rounded hover:bg-white cursor-pointer"
               >
                 {copied ? 'Copied' : 'Copy'}
               </button>
