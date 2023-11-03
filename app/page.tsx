@@ -19,13 +19,12 @@ const Home = () => (
       </p>
       <p className="text-3xl text-green-600 text-center mt-5 bg-gradient-to-r from-green-400 to-green-600 text-transparent bg-clip-text my-15">
       inspire the world with your passion for programming."</p>
-      <div className='my-10'></div>
-      <div className='flex justify-center animate-bounce mt-15'>
+      <div className='mt-5'></div>
+      <div className='flex justify-center animate-bounce mt-5'>
         <a href='/problems' className='btn-grad'>
           letsCode</a>
       </div>
     </section>
-    <div className='my-10'></div>
     <Courses/>
     <footer className='bg-black text-white py-4 mt-10'>
       <div className='container mx-auto px-4 text-center'>

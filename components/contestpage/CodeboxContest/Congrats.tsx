@@ -4,8 +4,8 @@ import '../../../styles/global.css'
 type Props = {}
 
 const Congrats = (props: Props) => {
-  return (
-    <div className="results-summary-container flex justify-between items-center">
+  		return (
+    				<div className="results-summary-container flex justify-between items-center">
 						 <div className="confetti">
 						   <div className="confetti-piece"></div>
 						   <div className="confetti-piece"></div>
@@ -44,7 +44,7 @@ const Congrats = (props: Props) => {
 						   </div>
 						 </div>
 					   </div>
-  )
+					)
 }
 
 export default Congrats
