@@ -16,12 +16,6 @@ const Page = (props: Props) => {
 
   return (
     <><div style={containerStyle}>
-          <iframe
-              src={process.env.NEXT_PUBLIC_BLOCKCHAIN_PAGE_LINK}
-              style={iframeStyle}
-              allow="fullscreen"
-              title="Blockchain: Revolutionizing the Digital World"
-          ></iframe>
          <div className="rounded-sm absolute bottom-7 right-6 w-52 h-8 bg-gradient-to-r from-indigo-700 to-indigo-900"><span className='flex align-middle justify-center mt-1 text-white'><a href="https://www.blockchain.com/">LearnMore</a></span></div>
       </div></>
   );
