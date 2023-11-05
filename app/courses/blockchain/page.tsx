@@ -15,9 +15,10 @@ const Page = (props: Props) => {
   };
 
   return (
-    <><div style={containerStyle}>
-         <div className="rounded-sm absolute bottom-7 right-6 w-52 h-8 bg-gradient-to-r from-indigo-700 to-indigo-900"><span className='flex align-middle justify-center mt-1 text-white'><a href="https://www.blockchain.com/">LearnMore</a></span></div>
-      </div></>
+    <div className="flex flex-col items-center justify-center h-screen">
+      <h1 className="text-4xl text-red-600 font-semibold">Work in Progress</h1>
+      <p className="text-lg text-gray-600">This page is under construction and will be available soon.</p>
+    </div>
   );
 };
 
