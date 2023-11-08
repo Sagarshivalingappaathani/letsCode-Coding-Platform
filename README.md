@@ -5,7 +5,7 @@
 -  Its primary purpose is to assist users in competitive coding. Users can solve coding problems and track their progress, including the number of problems they've solved in each topic.
 -   Additionally, they can participate in coding contests to further enhance their skills.
 - [Explore the live demo →](https://lets-code-pink.vercel.app/)(see this in desktop)
-- [See the live demo video →](https://www.youtube.com/watch?v=iezi3JEZW10&t=306s)
+- [See the live demo video →](https://youtu.be/Ax2vHEGnrkU)
 
   
 ### Features Implemented in the project 
@@ -21,7 +21,7 @@
    - Utilizes the Judge0 API for running and evaluating code submissions
 
 4. **Educational Courses**
-   - Includes 6 comprehensive courses: Data Structures and Algorithms (DSA), C++, JavaScript,Java,TypeScript and Basics Of BlockChain
+   - Includes 4 comprehensive courses: Data Structures and Algorithms (DSA), C++, JavaScript,Java
 
 5. **Contests**
    - Added a contest page where users can participate in timed contests.
