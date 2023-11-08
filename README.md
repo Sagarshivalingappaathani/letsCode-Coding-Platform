@@ -21,7 +21,7 @@
    - Utilizes the Judge0 API for running and evaluating code submissions
 
 4. **Educational Courses**
-   - Includes 4 comprehensive courses: Data Structures and Algorithms (DSA), C++, JavaScript,Java
+   - Includes 6 comprehensive courses: Data Structures and Algorithms (DSA), C++, JavaScript,Java,Machine Learning,Blockchain(basics)
 
 5. **Contests**
    - Added a contest page where users can participate in timed contests.
