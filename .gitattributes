@@ -1,3 +1,2 @@
-
-
-*.typescript linguist-detectable=false
+*.html linguist-detectable=false;
+*.typescript linguist-detectable=false;
