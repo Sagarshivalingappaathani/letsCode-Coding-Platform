@@ -50,7 +50,7 @@ const Register: React.FC = () => {
                 window.location.href = '/'; 
             })
             .catch((err)=>{
-                alert("failed to signUp with email and password")
+                alert("failed to signUp with email and password ,password must be minimum 6 letters")
             })
         }
         
