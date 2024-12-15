@@ -90,6 +90,23 @@ const ProblemsTable: React.FC<ProblemsTableProps> = ({ loadingProblems, setLoadi
   const email = user ? user.email : null;
   const userDetails = useUserDetails(email);
 
+  if (!user) {
+    setLoadingProblems(false);
+    return (
+      <tbody className='gradiant text-dark '>
+      <tr>
+        <td colSpan={6} className="text-center py-4 text-red-600">
+          Please log in to view the problems.{" "}
+          <Link href="/signIn" className="text-blue-600 underline">
+            Go to Login
+          </Link>
+        </td>
+      </tr>
+      </tbody>
+    );
+  }
+
+
   return (
     <>
       <tbody className='gradiant text-dark '>
@@ -98,8 +115,8 @@ const ProblemsTable: React.FC<ProblemsTableProps> = ({ loadingProblems, setLoadi
             problem.difficulty === "Easy"
               ? "text-dark-green-s"
               : problem.difficulty === "Medium"
-              ? "text-dark-yellow"
-              : "text-dark-pink";
+                ? "text-dark-yellow"
+                : "text-dark-pink";
 
           return (
             <tr className="gradiant items-center" key={problem.id}>

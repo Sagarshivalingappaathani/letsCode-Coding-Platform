@@ -15,17 +15,17 @@ const Home = () => (
         <span>/&gt;</span>
       </h1>
       <p className="text-3xl text-green-600 text-center mt-10 bg-gradient-to-r from-green-400 to-green-600 text-transparent bg-clip-text my-15">
-      "Code on letsCode and 
+        "Code on letsCode and
       </p>
       <p className="text-3xl text-green-600 text-center mt-5 bg-gradient-to-r from-green-400 to-green-600 text-transparent bg-clip-text my-15">
-      inspire the world with your passion for programming."</p>
+        inspire the world with your passion for programming."</p>
       <div className='mt-5'></div>
       <div className='flex justify-center animate-bounce mt-5'>
         <a href='/problems' className='btn-grad'>
           letsCode</a>
       </div>
     </section>
-    <Courses/>
+    <Courses />
     <footer className='bg-black text-white py-4 mt-10'>
       <div className='container mx-auto px-4 text-center'>
         <div className='text-2xl font-semibold mb-2'>Connect with Us</div>
@@ -33,6 +33,7 @@ const Home = () => (
         <div className='mt-2'>letsCode0418@gmail.com</div>
       </div>
     </footer>
+    
   </>
 );
 
