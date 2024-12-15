@@ -31,22 +31,6 @@
    - Problem distribution statistics using a pie chart (easy, medium, hard problems solved)
    - Displaying all solved problems
    - User activity log and calendar
-  
-
-### Upcoming Features
-
-- **User Forums:** Createing a community for users to discuss problems, solutions, and coding strategies.
-
-- **Real-time Code Collaboration:** Implementing real-time collaborative code editing and debugging.
-
-- **Leaderboards:** Adding leaderboards to track user progress and encourage friendly competition.
-
-- **In-Depth Analytics:** Provideing detailed analytics on user performance and learning progress.
-
-- **User Profile Customization:** Enable users to customize their profiles with avatars, bios, and more.
-
-- **Dark Mode:** Implementing the dark mode for users who prefer it.
-
 
 ## Tech Stack:
 
@@ -112,7 +96,5 @@ Before you begin, ensure you have met the following requirements:
 - GFG for Problems Details
 
 <br>
-
-**🌟Thank you for embarking on this coding journey with us! We're thrilled to have you on board and can't wait to see the incredible code you'll craft with letsCode. Happy coding and let's build a brighter future together!**
 
 
