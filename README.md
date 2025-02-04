@@ -1,6 +1,6 @@
 <img src="https://github.com/Sagarshivalingappaathani/letsCode/assets/121311033/e88b2239-2e5a-41f1-978d-6071f07d47a5" alt="logo" width="200" style="border-radius: 10px; margin: 10px;">
 
-### Project Description:
+### Project Descriptions:
 - This platform is designed to resemble popular coding websites such as LeetCode and GeeksforGeeks.
 -  Its primary purpose is to assist users in competitive coding. Users can solve coding problems and track their progress, including the number of problems they've solved in each topic.
 -   Additionally, they can participate in coding contests to further enhance their skills.
